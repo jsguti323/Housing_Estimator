@@ -1,0 +1,462 @@
+City,Max Temp,Humidity,Cloudiness,Wind Speed,Description
+Berkeley,88.09,65,20,10.36,few clouds
+Piedmont,87.76,62,20,10.36,few clouds
+Oakland,87.69,63,75,17.27,broken clouds
+Orinda,86.95,59,0,12.66,clear sky
+Alameda,91.31,39,0,8.01,clear sky
+San Leandro,92.37,60,20,10.36,few clouds
+Moraga,87.1,58,20,12.66,few clouds
+Albany,97.45,38,58,1.99,broken clouds
+El Cerrito,84.99,54,40,3.44,scattered clouds
+Castro Valley,91.94,52,0,10.36,clear sky
+Ashland,85.15,68,100,17.43,overcast clouds
+Cherryland,92.34,52,0,10.36,clear sky
+Hayward,91.78,49,0,10.36,clear sky
+San Lorenzo,86.94,43,0,7.0,clear sky
+Fairview,100.74,37,20,19.57,few clouds
+Union City,91.35,46,0,8.05,clear sky
+Fremont,91.38,46,0,8.05,clear sky
+Newark,101.44,34,75,18.41,broken clouds
+Milpitas,89.08,44,0,6.91,clear sky
+Dublin,90.25,42,0,8.05,clear sky
+Pleasanton,90.34,40,0,8.01,clear sky
+Livermore,90.81,37,0,5.75,clear sky
+South Lake Tahoe,89.62,20,20,6.91,few clouds
+Placerville,95.9,19,0,5.75,clear sky
+Cameron Park,97.39,22,0,3.0,clear sky
+Lodi,94.37,17,0,7.11,clear sky
+Chico,103.21,25,40,6.91,smoke
+Paradise,108.09,19,40,21.85,scattered clouds
+Magalia,85.55,9,0,7.36,clear sky
+Oroville,99.86,20,0,4.61,clear sky
+Grass Valley,96.51,22,0,4.0,clear sky
+Yuba City,105.03,22,0,5.75,clear sky
+Oakdale,80.02,46,40,14.97,scattered clouds
+South Yuba City,105.04,22,0,5.75,clear sky
+Woodland,97.72,28,0,3.44,clear sky
+Clearlake,98.35,13,0,4.56,clear sky
+Oakley,91.51,37,0,5.01,clear sky
+Brentwood,97.0,61,75,18.41,broken clouds
+Antioch,82.22,41,0,5.7,clear sky
+Pittsburg,91.47,42,0,12.66,clear sky
+Bay Point,92.25,42,0,12.66,clear sky
+Concord,92.28,43,0,12.66,clear sky
+Martinez,92.48,52,0,12.66,clear sky
+Pleasant Hill,92.39,50,0,12.66,clear sky
+Clayton,94.42,55,75,4.61,broken clouds
+Walnut Creek,91.63,54,0,12.66,clear sky
+Alamo,94.64,51,58,15.86,broken clouds
+San Ramon,90.81,46,0,8.05,clear sky
+Danville,100.02,44,20,9.22,few clouds
+Lafayette,89.94,62,75,9.22,thunderstorm
+Hercules,89.78,62,0,13.0,clear sky
+Benicia,92.48,52,0,12.66,clear sky
+Vallejo,90.14,59,0,13.0,clear sky
+Pinole,88.27,64,0,13.0,clear sky
+El Sobrante,87.89,64,1,13.0,clear sky
+San Pablo,78.91,95,95,2.06,overcast clouds
+Richmond,101.05,43,40,12.66,scattered clouds
+Tiburon,87.87,72,14,11.01,few clouds
+Arcata,71.2,78,100,8.05,haze
+Grants Pass,95.18,36,0,4.61,clear sky
+Auburn,84.74,57,20,8.05,few clouds
+Folsom,100.9,27,0,5.75,clear sky
+Fresno,100.36,22,20,6.91,few clouds
+Clovis,103.6,22,20,6.91,few clouds
+Selma,100.63,25,0,3.44,clear sky
+Kerman,82.26,26,0,4.61,clear sky
+Sanger,101.8,23,0,6.91,clear sky
+Reedley,101.98,27,0,3.44,clear sky
+Dinuba,104.97,27,0,3.44,clear sky
+Orange Cove,104.63,19,0,3.44,clear sky
+Parlier,101.91,26,0,3.44,clear sky
+Kingsburg,100.67,27,0,3.44,clear sky
+Lemoore,96.82,19,0,8.05,clear sky
+Hanford,96.75,21,0,5.75,clear sky
+Avenal,98.55,10,0,3.74,clear sky
+Coalinga,99.03,17,0,3.71,clear sky
+Mendota,93.47,10,0,5.59,clear sky
+Los Banos,81.09,91,89,3.69,overcast clouds
+Red Bluff,106.52,14,0,12.66,clear sky
+Eureka,71.2,73,27,5.01,scattered clouds
+Fortuna,70.93,69,18,3.0,few clouds
+Brawley,100.65,37,0,12.66,clear sky
+Mexicali,100.26,45,99,2.13,overcast clouds
+Imperial,100.62,48,99,3.24,overcast clouds
+Calexico,100.26,37,0,12.66,clear sky
+El Centro,100.38,38,0,12.66,clear sky
+Coachella,105.73,41,0,16.11,clear sky
+Progreso,95.11,69,13,16.64,few clouds
+Blythe,97.25,38,0,14.97,clear sky
+Algodones,81.14,65,87,7.74,overcast clouds
+Yuma,103.24,36,0,18.41,clear sky
+Ridgecrest,104.68,8,0,4.61,clear sky
+Lindsay,105.01,17,0,6.91,clear sky
+Pahrump,102.43,19,3,8.99,clear sky
+Oildale,99.88,19,0,10.36,clear sky
+Bakersfield,100.85,19,0,10.36,clear sky
+Lamont,107.55,22,0,5.5,clear sky
+Arvin,107.4,22,0,5.99,clear sky
+Fillmore,76.33,57,40,14.97,scattered clouds
+Taft,93.15,11,20,11.5,few clouds
+Shafter,101.07,8,0,6.51,clear sky
+Wasco,97.34,14,0,5.75,clear sky
+Delano,97.38,14,0,5.75,clear sky
+Tehachapi,98.53,14,0,11.99,clear sky
+California City,104.05,8,0,8.05,clear sky
+Lancaster,96.44,49,0,13.8,clear sky
+Quartz Hill,103.69,18,0,16.11,clear sky
+Corcoran,97.61,9,0,5.68,clear sky
+Ukiah,104.43,25,0,6.91,clear sky
+Windsor,89.98,58,0,24.16,clear sky
+Susanville,90.09,14,0,5.75,clear sky
+Sun Valley,94.59,12,40,6.91,smoke
+Burbank,98.26,56,0,8.05,clear sky
+San Fernando,82.13,84,61,1.28,broken clouds
+Santa Clarita,102.52,42,0,8.05,clear sky
+Calabasas,97.05,56,0,5.01,clear sky
+West Hollywood,97.79,62,0,11.5,clear sky
+Beverly Hills,97.93,65,0,11.5,clear sky
+Santa Monica,98.44,70,0,11.5,clear sky
+Glendale,95.52,50,75,6.91,broken clouds
+Pasadena,101.08,56,75,9.22,broken clouds
+South Pasadena,96.49,55,20,11.5,few clouds
+Los Angeles,95.59,61,0,11.5,clear sky
+East Los Angeles,94.93,58,0,11.5,clear sky
+Alhambra,94.93,56,20,11.5,few clouds
+Monterey Park,95.31,56,20,11.5,few clouds
+Culver City,98.53,70,0,11.5,clear sky
+Inglewood,96.21,73,0,12.66,clear sky
+Huntington Park,94.73,66,0,11.5,clear sky
+Westmont,94.03,72,0,12.66,clear sky
+Walnut Park,94.84,68,0,11.5,clear sky
+Willowbrook,94.48,72,0,12.66,clear sky
+West Athens,94.17,73,0,12.66,clear sky
+Lynwood,95.02,69,0,12.66,clear sky
+El Segundo,96.26,77,20,12.66,few clouds
+Gardena,93.74,75,0,12.66,clear sky
+Carson,93.13,77,40,12.66,scattered clouds
+West Carson,93.13,77,40,12.66,scattered clouds
+Lomita,91.54,77,40,12.66,scattered clouds
+Long Beach,91.83,75,0,12.66,clear sky
+Rancho Palos Verdes,87.42,82,40,12.66,scattered clouds
+La Canada Flintridge,98.01,55,0,11.5,clear sky
+Claremont,99.1,49,0,11.5,clear sky
+La Verne,99.45,49,0,11.5,clear sky
+San Dimas,98.49,51,0,11.5,clear sky
+Glendora,99.16,50,0,11.5,clear sky
+Azusa,94.95,51,0,11.5,clear sky
+Charter Oak,98.91,51,0,11.5,clear sky
+Pomona,98.91,51,0,11.5,clear sky
+Diamond Bar,95.72,52,0,11.5,clear sky
+Walnut,94.93,53,0,11.5,clear sky
+Covina,95.14,51,0,11.5,clear sky
+Citrus,95.02,50,0,11.5,clear sky
+Baldwin Park,95.81,53,20,11.5,few clouds
+West Puente Valley,95.97,54,20,11.5,few clouds
+Avocado Heights,95.92,53,20,11.5,few clouds
+El Monte,95.63,52,20,11.5,few clouds
+West Covina,95.76,52,20,11.5,few clouds
+Valinda,95.85,54,20,11.5,few clouds
+La Puente,95.86,55,20,11.5,few clouds
+South San Jose Hills,95.63,55,0,11.5,clear sky
+Rowland Heights,95.22,56,20,11.5,few clouds
+South El Monte,95.94,52,20,11.5,few clouds
+Hacienda Heights,95.41,55,20,11.5,few clouds
+Duarte,95.34,51,20,11.5,few clouds
+Monrovia,76.77,80,100,10.4,overcast clouds
+Arcadia,95.07,55,20,11.5,few clouds
+Sierra Madre,93.63,55,20,11.5,few clouds
+Temple City,95.38,55,20,11.5,few clouds
+Rosemead,95.72,55,20,11.5,few clouds
+Altadena,98.13,54,20,11.5,few clouds
+San Marino,82.09,86,0,3.44,clear sky
+San Gabriel,95.34,55,20,11.5,few clouds
+Montebello,96.08,56,20,11.5,few clouds
+La Habra,94.71,58,20,11.5,few clouds
+East La Mirada,95.79,60,20,11.5,few clouds
+South Whittier,96.01,61,20,11.5,few clouds
+Whittier,95.36,59,20,11.5,few clouds
+Pico Rivera,95.07,60,20,11.5,few clouds
+Santa Fe Springs,96.19,61,20,11.5,few clouds
+Norwalk,95.0,64,20,11.5,few clouds
+La Mirada,96.01,61,20,11.5,few clouds
+Buena Park,96.4,63,20,11.5,few clouds
+Commerce,95.14,60,0,11.5,clear sky
+Bell Gardens,96.37,61,0,11.5,clear sky
+Bell,103.39,34,0,12.66,clear sky
+Maywood,96.28,62,0,11.5,clear sky
+Cudahy,96.21,64,0,11.5,clear sky
+South Gate,96.26,67,0,11.5,clear sky
+Downey,95.25,62,0,11.5,clear sky
+Paramount,94.1,66,0,12.66,clear sky
+Compton,93.02,71,0,12.66,clear sky
+Signal Hill,91.4,71,0,12.66,clear sky
+Bellflower,95.07,65,0,11.5,clear sky
+Lakewood,72.5,72,77,10.0,broken clouds
+Cerritos,95.16,66,20,11.5,few clouds
+La Palma,95.18,65,20,11.5,few clouds
+Artesia,95.14,65,0,11.5,clear sky
+Hawaiian Gardens,95.22,66,20,11.5,few clouds
+Los Alamitos,91.96,67,20,11.5,few clouds
+Rossmoor,92.01,68,20,11.5,few clouds
+Seal Beach,91.87,70,20,11.5,few clouds
+Lennox,96.55,74,0,12.66,clear sky
+Hawthorne,96.39,76,0,12.66,clear sky
+Lawndale,94.69,76,0,12.66,clear sky
+Alondra Park,94.75,76,0,12.66,clear sky
+Manhattan Beach,96.6,77,20,12.66,few clouds
+Hermosa Beach,94.8,78,40,12.66,scattered clouds
+Redondo Beach,93.63,78,40,12.66,scattered clouds
+Palos Verdes Estates,90.18,79,40,12.66,scattered clouds
+Torrance,92.95,78,40,12.66,scattered clouds
+Agoura Hills,94.77,55,11,8.34,few clouds
+Westlake Village,97.0,58,13,5.01,few clouds
+Malibu,94.51,82,31,8.1,scattered clouds
+Adelanto,99.95,14,5,8.19,clear sky
+Palmdale,103.17,17,0,11.5,clear sky
+Madera,104.52,14,0,1.99,clear sky
+Chowchilla,105.03,22,0,6.91,clear sky
+Novato,84.54,48,0,6.91,clear sky
+San Rafael,60.42,62,21,9.84,few clouds
+San Anselmo,86.25,66,0,5.75,clear sky
+Larkspur,85.3,69,13,11.01,few clouds
+Corte Madera,86.04,74,13,11.01,few clouds
+Mill Valley,85.05,79,18,11.01,few clouds
+Petaluma,86.18,48,0,6.91,clear sky
+Rohnert Park,85.93,46,0,8.01,clear sky
+Merced,97.14,25,0,5.35,clear sky
+Livingston,61.84,92,40,9.22,scattered clouds
+Turlock,98.01,27,0,9.22,clear sky
+Atwater,97.84,20,0,6.91,clear sky
+Patterson,98.02,12,0,3.94,clear sky
+Altamont,88.77,24,0,9.22,clear sky
+Salinas,72.41,69,20,14.97,few clouds
+Watsonville,89.04,63,0,6.91,clear sky
+Marina,79.21,81,75,14.97,broken clouds
+Gonzales,96.08,63,75,4.61,broken clouds
+Seaside,67.5,83,75,11.5,broken clouds
+Soledad,84.33,74,20,11.5,thunderstorm
+Greenfield,84.83,58,75,16.11,broken clouds
+King City,98.91,15,0,2.42,clear sky
+Monterey,94.17,15,0,4.38,clear sky
+Pacific Grove,71.2,84,75,11.5,broken clouds
+Napa,99.55,18,0,5.79,clear sky
+American Canyon,89.85,59,0,9.22,clear sky
+Sonoma,104.9,47,0,9.22,clear sky
+Santa Rosa,82.38,85,86,4.36,overcast clouds
+North Auburn,98.49,21,0,5.75,clear sky
+Truckee,91.09,19,0,1.01,clear sky
+Brea,95.83,56,20,11.5,few clouds
+Fullerton,95.68,59,20,11.5,few clouds
+Placentia,89.26,47,9,1.1,clear sky
+Yorba Linda,95.76,57,20,11.5,few clouds
+Chino Hills,95.34,53,0,11.5,clear sky
+Mission Viejo,94.75,63,59,5.01,broken clouds
+Lake Forest,95.68,59,20,8.05,few clouds
+Corona,100.78,51,0,11.5,clear sky
+Rancho Santa Margarita,95.11,58,61,5.99,broken clouds
+Laguna Hills,94.1,62,20,8.05,few clouds
+San Juan Capistrano,92.59,67,72,5.99,broken clouds
+Laguna Niguel,89.85,66,64,7.0,broken clouds
+San Clemente,93.65,72,76,7.0,broken clouds
+Dana Point,88.54,67,66,5.99,broken clouds
+Irvine,95.18,60,20,8.05,few clouds
+Tustin,95.77,58,20,10.36,few clouds
+Laguna Beach,91.74,63,20,8.05,few clouds
+Aliso Viejo,90.54,65,20,8.05,few clouds
+Laguna Woods,94.82,63,20,8.05,few clouds
+Costa Mesa,91.47,62,20,8.05,few clouds
+Newport Beach,91.76,63,20,8.05,few clouds
+Fountain Valley,93.45,63,20,11.5,few clouds
+Santa Ana,95.86,59,20,11.5,few clouds
+Orange,95.68,59,20,8.05,few clouds
+Garden Grove,95.02,63,20,11.5,few clouds
+Anaheim,95.72,60,20,11.5,few clouds
+Stanton,95.58,64,20,11.5,few clouds
+Cypress,94.21,65,20,11.5,few clouds
+Westminster,74.77,72,75,17.27,broken clouds
+Huntington Beach,88.29,65,20,11.5,few clouds
+Rocklin,100.8,26,0,5.75,clear sky
+Orangevale,101.48,28,0,5.75,clear sky
+Citrus Heights,101.08,28,0,5.75,clear sky
+Roseville,101.08,28,0,5.75,clear sky
+North Highlands,100.98,29,0,5.75,clear sky
+Lincoln,92.01,52,0,12.66,clear sky
+Grand Terrace,103.14,44,20,6.91,haze
+Rubidoux,104.2,44,0,9.22,haze
+Riverside,97.27,45,0,16.11,clear sky
+Pedley,104.36,46,0,11.5,clear sky
+Glen Avon,104.25,46,0,11.5,clear sky
+Mira Loma,103.01,47,0,11.5,clear sky
+Norco,103.32,51,0,11.5,clear sky
+Moreno Valley,99.95,46,20,7.0,haze
+Perris,100.6,36,20,6.91,few clouds
+Lake Elsinore,99.64,38,90,3.0,overcast clouds
+Sun City,96.01,50,75,6.91,broken clouds
+Canyon Lake,102.56,38,33,5.99,scattered clouds
+Hemet,101.59,35,98,8.01,overcast clouds
+San Jacinto,101.7,35,97,8.01,overcast clouds
+Wildomar,101.08,33,0,9.22,clear sky
+Murrieta,101.88,39,0,9.22,clear sky
+Temecula,102.16,45,0,11.5,clear sky
+East Hemet,101.26,37,94,8.01,overcast clouds
+Yucaipa,97.88,42,20,1.01,haze
+Beaumont,96.78,55,0,5.75,clear sky
+Banning,98.98,38,87,4.38,overcast clouds
+Palm Springs,104.09,39,0,11.5,clear sky
+Rancho Mirage,105.6,37,0,11.5,clear sky
+Cathedral City,105.3,36,0,11.5,clear sky
+La Quinta,106.03,40,0,16.11,clear sky
+Desert Hot Springs,102.6,39,0,11.5,clear sky
+Palm Desert,104.95,37,0,11.5,clear sky
+Indio,107.29,41,0,16.11,clear sky
+Twentynine Palms,98.74,33,93,8.05,overcast clouds
+Sacramento,100.29,33,0,5.75,clear sky
+Rosemont,100.81,31,0,5.75,clear sky
+Florin,99.45,31,0,5.75,clear sky
+West Sacramento,99.48,29,0,4.61,clear sky
+La Riviera,100.8,30,0,5.75,clear sky
+Carmichael,101.88,29,0,5.75,clear sky
+Rio Linda,100.78,29,0,4.61,clear sky
+Foothill Farms,101.82,29,0,5.75,clear sky
+Fair Oaks,101.66,29,0,5.75,clear sky
+Rancho Cordova,101.01,29,0,5.75,clear sky
+Elk Grove,99.01,34,0,5.75,clear sky
+Galt,97.25,36,0,10.4,clear sky
+Hollister,71.58,49,0,10.36,clear sky
+Gilroy,88.45,47,0,10.36,clear sky
+Chino,101.37,52,20,11.5,few clouds
+Montclair,100.49,36,0,18.41,clear sky
+Upland,102.88,48,0,11.5,clear sky
+Rancho Cucamonga,101.7,47,20,11.5,few clouds
+Ontario,100.36,48,20,11.5,few clouds
+Fontana,104.04,44,0,9.22,haze
+Bloomington,80.92,46,75,16.11,broken clouds
+Rialto,105.66,41,20,7.0,haze
+San Bernardino,97.66,35,100,14.43,overcast clouds
+Crestline,93.43,34,20,3.0,haze
+Colton,104.97,43,20,5.99,haze
+Highland,103.24,38,20,4.0,haze
+Loma Linda,102.88,43,20,6.91,haze
+Redlands,103.1,41,20,1.01,haze
+Barstow,103.19,19,51,8.95,broken clouds
+Apple Valley,100.44,15,37,1.01,scattered clouds
+Victorville,100.47,15,10,5.01,clear sky
+Hesperia,99.59,19,37,11.99,scattered clouds
+Yucca Valley,93.72,48,80,13.0,broken clouds
+Lake Havasu City,102.81,30,0,12.66,clear sky
+Bullhead City,103.42,29,75,19.57,broken clouds
+San Diego,90.57,71,75,11.5,broken clouds
+Lemon Grove,91.72,65,0,11.5,clear sky
+National City,92.5,69,75,13.8,broken clouds
+La Mesa,94.6,63,0,11.5,clear sky
+La Presa,92.08,63,0,13.8,clear sky
+Bonita,92.73,66,0,13.8,clear sky
+Chula Vista,92.48,69,100,13.8,overcast clouds
+Coronado,91.78,71,40,11.5,scattered clouds
+Solana Beach,91.54,68,0,11.99,clear sky
+Poway,95.76,57,0,11.5,clear sky
+Imperial Beach,90.73,71,100,13.8,overcast clouds
+Tijuana,88.63,70,20,13.8,few clouds
+Spring Valley,106.95,19,40,21.85,scattered clouds
+Rancho San Diego,96.31,60,0,11.5,clear sky
+El Cajon,96.03,59,0,11.5,clear sky
+Bostonia,101.28,33,75,16.11,broken clouds
+Lakeside,90.01,72,75,4.61,light rain
+Alpine,93.54,50,0,6.91,clear sky
+Santee,96.33,58,0,11.5,clear sky
+Escondido,95.29,59,0,11.5,clear sky
+Encinitas,88.72,69,0,11.99,clear sky
+San Marcos,93.49,63,0,11.5,clear sky
+Carlsbad,93.09,70,100,11.5,overcast clouds
+Oceanside,93.02,70,100,11.5,overcast clouds
+Vista,93.15,64,0,11.5,clear sky
+Fallbrook,97.52,55,0,11.5,clear sky
+Ramona,93.76,53,0,8.05,clear sky
+Tecate,94.15,41,54,8.28,broken clouds
+La Joya,88.39,50,75,0.34,broken clouds
+San Francisco,89.51,74,20,11.99,few clouds
+Daly City,86.58,77,20,14.0,few clouds
+South San Francisco,90.1,75,20,10.36,few clouds
+Stockton,95.5,31,0,6.91,clear sky
+Country Club,92.01,64,40,17.27,scattered clouds
+Garden Acres,95.43,31,0,6.91,clear sky
+Lathrop,93.49,31,0,6.91,clear sky
+Riverbank,102.61,27,0,9.22,clear sky
+Ripon,68.04,82,75,14.97,broken clouds
+Manteca,93.45,31,0,6.91,clear sky
+Tracy,93.04,14,0,5.82,clear sky
+Atascadero,86.29,36,0,7.0,clear sky
+Morro Bay,89.19,62,19,13.0,few clouds
+San Luis Obispo,84.72,54,0,6.91,clear sky
+Arroyo Grande,83.25,62,0,6.91,clear sky
+Pismo Beach,84.63,63,0,6.91,clear sky
+Grover Beach,83.43,63,0,6.91,clear sky
+Santa Maria,74.5,78,0,3.44,clear sky
+Pacifica,87.24,78,20,10.36,few clouds
+San Bruno,89.11,73,20,10.36,few clouds
+Millbrae,90.12,71,20,10.36,few clouds
+Hillsborough,88.32,67,20,10.36,few clouds
+Burlingame,90.05,66,20,10.36,few clouds
+San Mateo,84.69,63,0,10.36,clear sky
+Belmont,93.09,60,0,10.36,clear sky
+Foster City,93.2,59,0,10.36,clear sky
+San Carlos,83.64,68,99,2.8,overcast clouds
+Redwood City,89.11,57,0,10.36,clear sky
+Menlo Park,100.42,35,0,9.22,clear sky
+East Palo Alto,93.15,52,0,8.05,clear sky
+Palo Alto,93.13,53,0,8.05,clear sky
+Stanford,92.95,53,0,8.05,clear sky
+Los Altos Hills,92.26,48,0,8.05,clear sky
+Half Moon Bay,88.88,68,100,10.36,overcast clouds
+Goleta,80.6,65,0,3.44,clear sky
+Santa Barbara,79.23,44,0,8.05,clear sky
+Carpinteria,90.3,54,32,8.41,scattered clouds
+Lompoc,85.69,68,0,12.66,clear sky
+Isla Vista,86.25,68,20,9.22,few clouds
+San Jose,90.59,39,0,3.44,clear sky
+Santa Clara,87.46,62,40,16.11,scattered clouds
+Campbell,92.16,62,20,13.8,few clouds
+East Foothills,92.05,35,0,3.44,clear sky
+Mountain View,92.88,47,0,6.91,clear sky
+Sunnyvale,92.79,46,0,6.91,clear sky
+Cupertino,92.37,45,0,6.91,clear sky
+Saratoga,96.33,60,90,1.01,overcast clouds
+Los Gatos,87.91,46,0,5.01,clear sky
+Los Altos,92.64,48,0,8.05,clear sky
+Morgan Hill,88.88,46,0,8.05,clear sky
+Scotts Valley,87.01,55,1,3.0,clear sky
+Santa Cruz,89.06,48,40,19.57,scattered clouds
+Soquel,89.96,55,0,6.91,clear sky
+Aptos,89.65,56,0,6.91,clear sky
+Capitola,90.01,56,0,6.91,clear sky
+Redding,106.63,13,0,3.0,clear sky
+Shasta Lake,105.76,14,0,1.01,clear sky
+Anderson,94.91,44,0,13.8,clear sky
+Reno,96.82,13,40,6.91,smoke
+Klamath Falls,88.86,23,0,9.22,clear sky
+Fairfield,95.9,48,0,13.8,clear sky
+Suisun City,93.56,42,0,17.27,clear sky
+Vacaville,98.28,36,0,17.27,clear sky
+Dixon,98.71,35,0,3.44,clear sky
+Roseland,103.01,46,0,9.22,clear sky
+Healdsburg,104.31,49,0,9.22,clear sky
+Modesto,102.81,27,0,9.22,clear sky
+Ceres,102.79,27,0,9.22,clear sky
+Olivehurst,100.98,22,0,5.75,clear sky
+Exeter,66.67,85,20,11.5,few clouds
+Visalia,106.18,27,0,8.05,clear sky
+Farmersville,106.09,27,0,8.05,clear sky
+Tulare,97.93,10,0,1.01,clear sky
+Porterville,105.75,17,0,6.91,clear sky
+Simi Valley,97.65,52,0,5.99,clear sky
+Santa Paula,99.36,65,0,9.22,clear sky
+Oxnard,99.05,73,100,10.36,overcast clouds
+Port Hueneme,97.25,75,100,10.36,overcast clouds
+Camarillo,99.73,70,0,10.36,clear sky
+Moorpark,101.3,58,0,5.99,clear sky
+Thousand Oaks,97.18,58,11,5.01,few clouds
+Davis,94.05,27,0,11.5,clear sky
+Marysville,84.97,62,0,6.91,clear sky
+Linda,106.02,22,0,5.75,clear sky
