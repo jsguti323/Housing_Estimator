@@ -1,0 +1,456 @@
+County,City,Population
+San Bernardino,Adelanto,8517
+Los Angeles,Agoura Hills,20390
+Alameda,Alameda,76459
+Alameda,Albany,16327
+Los Angeles,Alhambra,82106
+Modoc,Alturas,3231
+Amador,Amador City,196
+Orange,Anaheim,266406
+Shasta,Anderson,8299
+Calaveras,Angels,2409
+Contra Costa,Antioch,62195
+San Bernardino,Apple Valley,46079
+Los Angeles,Arcadia,48290
+Humboldt,Arcata,15197
+San Luis Obispo,Arroyo Grande,14378
+Los Angeles,Artesia,15464
+Kern,Arvin,9286
+San Luis Obispo,Atascadero,23138
+San Mateo,Atherton,7163
+Merced,Atwater,22282
+Placer,Auburn,10592
+Los Angeles,Avalon,2918
+Kings,Avenal,9770
+Los Angeles,Azusa,41333
+Kern,Bakersfield,174820
+Los Angeles,Baldwin Park,69330
+Riverside,Banning,20570
+San Bernardino,Barstow,21472
+Riverside,Beaumont,9685
+Los Angeles,Bell,34365
+Los Angeles,Bell Gardens,42355
+Los Angeles,Bellflower,61815
+San Mateo,Belmont,24127
+Marin,Belvedere,2147
+Solano,Benicia,24437
+Alameda,Berkeley,102724
+Los Angeles,Beverly Hills,31971
+San Bernardino,Big Bear Lake,5351
+Butte,Biggs,1581
+Inyo,Bishop,3475
+Humboldt,Blue Lake,1235
+Riverside,Blythe,8428
+Los Angeles,Bradbury,829
+Imperial,Brawley,18923
+Orange,Brea,32873
+Contra Costa,Brentwood,7563
+San Mateo,Brisbane,2952
+Orange,Buena Park,68784
+Los Angeles,Burbank,93643
+San Mateo,Burlingame,26801
+Imperial,Calexico,18633
+Kern,California City,5955
+Imperial,Calipatria,2690
+Napa,Calistoga,4468
+Ventura,Camarillo,52303
+Santa Clara,Campbell,36048
+Santa Cruz,Capitola,10171
+San Diego,Carlsbad,63126
+Monterey,Carmel-By-The-Sea,4239
+Santa Barbara,Carpinteria,13747
+Los Angeles,Carson,83995
+Riverside,Cathedral City,30085
+Stanislaus,Ceres,26314
+Los Angeles,Cerritos,53240
+Butte,Chico,40079
+San Bernardino,Chino,59682
+Madera,Chowchilla,5930
+San Diego,Chula Vista,63126
+Los Angeles,Claremont,32503
+Contra Costa,Clayton,7317
+Sonoma,Cloverdale,4924
+Fresno,Clovis,50323
+Riverside,Coachella,16896
+Fresno,Coalinga,8212
+Placer,Colfax,1306
+San Mateo,Colma,1103
+San Bernardino,Colton,40213
+Colusa,Colusa,4934
+Los Angeles,Commerce,12135
+Los Angeles,Compton,90454
+Contra Costa,Concord,111348
+Kings,Corcoran,13364
+Tehama,Corning,5870
+Riverside,Corona,76095
+San Diego,Coronado,26540
+Marin,Corte Madera,8272
+Orange,Costa Mesa,96357
+Sonoma,Cotati,5714
+Los Angeles,Covina,43207
+Del Norte,Crescent City,4380
+Los Angeles,Cudahy,22817
+Los Angeles,Culver City,38793
+Santa Clara,Cupertino,40263
+Orange,Cypress,42655
+San Mateo,Daly City,92311
+Orange,Dana Point,31896
+Contra Costa,Danville,31306
+Yolo,Davis,46209
+San Diego,Del Mar,4860
+Monterey,Del Rey Oaks,1661
+Kern,Delano,22762
+Riverside,Desert Hot Springs,11668
+Los Angeles,Diamond Bar,53672
+Tulare,Dinuba,12743
+Solano,Dixon,10401
+Siskiyou,Dorris,892
+Merced,Dos Palos,4196
+Los Angeles,Downey,91444
+Los Angeles,Duarte,20688
+Alameda,Dublin,23229
+Siskiyou,Dunsmuir,2129
+San Mateo,East Palo Alto,23451
+San Diego,El Cajon,88693
+Imperial,El Centro,31384
+Contra Costa,El Cerrito,22869
+Los Angeles,El Monte,106209
+Los Angeles,El Segundo,15223
+Alameda,Emeryville,5740
+San Diego,Encinitas,55386
+San Joaquin,Escalon,4437
+San Diego,Escondido,108635
+Siskiyou,Etna,835
+Humboldt,Eureka,27025
+Tulare,Exeter,7276
+Marin,Fairfax,6931
+Solano,Fairfield,77211
+Tulare,Farmersville,6235
+Humboldt,Ferndale,1331
+Ventura,Fillmore,11992
+Fresno,Firebaugh,4429
+Sacramento,Folsom,29802
+San Bernardino,Fontana,87535
+Mendocino,Fort Bragg,6078
+Siskiyou,Fort Jones,639
+Humboldt,Fortuna,8788
+San Mateo,Foster City,28176
+Orange,Fountain Valley,53691
+Fresno,Fowler,3208
+Alameda,Fremont,173339
+Fresno,Fresno,354202
+Orange,Fullerton,114144
+Sacramento,Galt,8889
+Orange,Garden Grove,143050
+Los Angeles,Gardena,49847
+Santa Clara,Gilroy,26303
+Los Angeles,Glendale,180038
+Los Angeles,Glendora,47828
+Monterey,Gonzales,4660
+San Bernardino,Grand Terrace,10946
+Nevada,Grass Valley,9048
+Monterey,Greenfield,7464
+Butte,Gridley,4631
+San Luis Obispo,Grover Beach,11656
+Santa Barbara,Guadalupe,5479
+Merced,Gustine,3931
+San Mateo,Half Moon Bay,8886
+Kings,Hanford,30897
+Los Angeles,Hawaiian Gardens,13639
+Los Angeles,Hawthorne,71349
+Alameda,Hayward,111498
+Sonoma,Healdsburg,9469
+Riverside,Hemet,36094
+Contra Costa,Hercules,16829
+Los Angeles,Hermosa Beach,18219
+San Bernardino,Hesperia,50418
+Los Angeles,Hidden Hills,1729
+San Bernardino,Highland,34439
+San Mateo,Hillsborough,10667
+San Benito,Hollister,19212
+Imperial,Holtville,4820
+Stanislaus,Hughson,3259
+Orange,Huntington Beach,181519
+Los Angeles,Huntington Park,56065
+Fresno,Huron,4766
+Imperial,Imperial,4113
+San Diego,Imperial Beach,26512
+Riverside,Indian Wells,2647
+Riverside,Indio,36793
+Los Angeles,Industry,631
+Los Angeles,Inglewood,109602
+Amador,Ione,6516
+Orange,Irvine,110330
+Los Angeles,Irwindale,1050
+Sacramento,Isleton,833
+Amador,Jackson,3545
+Fresno,Kerman,5448
+Monterey,King City,7634
+Fresno,Kingsburg,7205
+Los Angeles,La Cañada Flintridge,19378
+Orange,La Habra,51266
+Los Angeles,La Habra Heights,6226
+San Diego,La Mesa,52931
+Los Angeles,La Mirada,40452
+Orange,La Palma,15392
+Los Angeles,La Puente,36955
+Riverside,La Quinta,11215
+Los Angeles,La Verne,30897
+Contra Costa,Lafayette,23501
+Orange,Laguna Beach,23170
+Orange,Laguna Niguel,44400
+Riverside,Lake Elsinore,18285
+Lake,Lakeport,4390
+Los Angeles,Lakewood,73557
+Los Angeles,Lancaster,97291
+Marin,Larkspur,11070
+San Joaquin,Lathrop,6841
+Los Angeles,Lawndale,27331
+San Diego,Lemon Grove,23984
+Kings,Lemoore,13622
+Placer,Lincoln,7248
+Tulare,Lindsay,8338
+Sutter,Live Oak,4320
+Alameda,Livermore,56741
+Merced,Livingston,7317
+San Joaquin,Lodi,51874
+San Bernardino,Loma Linda,17400
+Los Angeles,Lomita,19382
+Santa Barbara,Lompoc,37649
+Los Angeles,Long Beach,429433
+Placer,Loomis,5705
+Orange,Los Alamitos,11676
+Santa Clara,Los Altos,26303
+Santa Clara,Los Altos Hills,7514
+Los Angeles,Los Angeles,3485398
+Merced,Los Banos,14519
+Santa Clara,Los Gatos,27357
+Sierra,Loyalton,931
+Los Angeles,Lynwood,61945
+Madera,Madera,29281
+Mono,Mammoth Lakes,4785
+Los Angeles,Manhattan Beach,32063
+San Joaquin,Manteca,40773
+Kern,Maricopa,1193
+Monterey,Marina,26436
+Contra Costa,Martinez,31808
+Yuba,Marysville,12324
+Los Angeles,Maywood,27850
+Kern,McFarland,7005
+Fresno,Mendota,6821
+San Mateo,Menlo Park,28040
+Merced,Merced,56216
+Marin,Mill Valley,13038
+San Mateo,Millbrae,20412
+Santa Clara,Milpitas,50686
+Orange,Mission Viejo,72820
+Stanislaus,Modesto,164730
+Los Angeles,Monrovia,35761
+Siskiyou,Montague,1415
+San Bernardino,Montclair,28434
+Santa Clara,Monte Sereno,3287
+Los Angeles,Montebello,59564
+Monterey,Monterey,31954
+Los Angeles,Monterey Park,60738
+Ventura,Moorpark,25494
+Contra Costa,Moraga,15852
+Riverside,Moreno Valley,118779
+Santa Clara,Morgan Hill,23928
+San Luis Obispo,Morro Bay,9664
+Siskiyou,Mount Shasta,3460
+Santa Clara,Mountain View,67460
+Napa,Napa,61842
+San Diego,National City,54249
+San Bernardino,Needles,5191
+Nevada,Nevada City,2855
+Alameda,Newark,37861
+Stanislaus,Newman,4151
+Orange,Newport Beach,66643
+Riverside,Norco,23302
+Los Angeles,Norwalk,94279
+Marin,Novato,47585
+Stanislaus,Oakdale,11961
+Alameda,Oakland,372242
+San Diego,Oceanside,128398
+Ventura,Ojai,7613
+San Bernardino,Ontario,133179
+Orange,Orange,110658
+Fresno,Orange Cove,5604
+Contra Costa,Orinda,16642
+Glenn,Orland,5052
+Butte,Oroville,11960
+Ventura,Oxnard,142216
+Monterey,Pacific Grove,16117
+San Mateo,Pacifica,37670
+Riverside,Palm Desert,23252
+Riverside,Palm Springs,40181
+Los Angeles,Palmdale,68842
+Santa Clara,Palo Alto,55900
+Los Angeles,Palos Verdes Estates,13512
+Butte,Paradise,25408
+Los Angeles,Paramount,47669
+Fresno,Parlier,7938
+Los Angeles,Pasadena,131591
+San Luis Obispo,Paso Robles,18583
+Stanislaus,Patterson,8626
+Riverside,Perris,21460
+Sonoma,Petaluma,43184
+Los Angeles,Pico Rivera,59177
+Alameda,Piedmont,10602
+Contra Costa,Pinole,17460
+San Luis Obispo,Pismo Beach,7669
+Contra Costa,Pittsburg,47564
+Orange,Placentia,41259
+El Dorado,Placerville,8355
+Contra Costa,Pleasant Hill,31585
+Alameda,Pleasanton,50553
+Amador,Plymouth,811
+Mendocino,Point Arena,407
+Los Angeles,Pomona,131723
+Ventura,Port Hueneme,20319
+Tulare,Porterville,29563
+Plumas,Portola,2193
+San Mateo,Portola Valley,4194
+San Diego,Poway,43516
+San Bernardino,Rancho Cucamonga,101409
+Riverside,Rancho Mirage,9778
+Los Angeles,Rancho Palos Verdes,41659
+Tehama,Red Bluff,12363
+Shasta,Redding,66462
+San Bernardino,Redlands,60394
+Los Angeles,Redondo Beach,60167
+San Mateo,Redwood City,66072
+Fresno,Reedley,15791
+San Bernardino,Rialto,72388
+Contra Costa,Richmond,87425
+Kern,Ridgecrest,27725
+Humboldt,Rio Dell,3012
+Solano,Rio Vista,3316
+San Joaquin,Ripon,7455
+Stanislaus,Riverbank,8547
+Riverside,Riverside,226505
+Placer,Rocklin,19033
+Sonoma,Rohnert Park,36326
+Los Angeles,Rolling Hills,1871
+Los Angeles,Rolling Hills Estates,7789
+Los Angeles,Rosemead,51638
+Placer,Roseville,44685
+Marin,Ross,2123
+Sacramento,Sacramento,369365
+Monterey,Salinas,108777
+Marin,San Anselmo,11743
+San Bernardino,San Bernardino,164164
+San Mateo,San Bruno,38961
+San Mateo,San Carlos,26167
+Orange,San Clemente,41100
+San Diego,San Diego,1110549
+Los Angeles,San Dimas,32397
+Los Angeles,San Fernando,22580
+San Francisco,San Francisco,723959
+Los Angeles,San Gabriel,37120
+Riverside,San Jacinto,16210
+Fresno,San Joaquin,2311
+Santa Clara,San Jose,782248
+San Benito,San Juan Bautista,1570
+Orange,San Juan Capistrano,26183
+Alameda,San Leandro,68223
+San Luis Obispo,San Luis Obispo,41958
+San Diego,San Marcos,38974
+Los Angeles,San Marino,12959
+San Mateo,San Mateo,85486
+Contra Costa,San Pablo,25158
+Marin,San Rafael,48404
+Contra Costa,San Ramon,35303
+Monterey,Sand City,192
+Fresno,Sanger,16839
+Orange,Santa Ana,293742
+Santa Barbara,Santa Barbara,85571
+Santa Clara,Santa Clara,93613
+Los Angeles,Santa Clarita,110642
+Santa Cruz,Santa Cruz,49040
+Los Angeles,Santa Fe Springs,15520
+Santa Barbara,Santa Maria,61284
+Los Angeles,Santa Monica,86905
+Ventura,Santa Paula,25062
+Sonoma,Santa Rosa,113313
+San Diego,Santee,52902
+Santa Clara,Saratoga,28061
+Marin,Sausalito,7152
+Santa Cruz,Scotts Valley,8615
+Orange,Seal Beach,25098
+Monterey,Seaside,38901
+Sonoma,Sebastopol,7004
+Fresno,Selma,14757
+Kern,Shafter,8409
+Los Angeles,Sierra Madre,10762
+Los Angeles,Signal Hill,8371
+Ventura,Simi Valley,100217
+San Diego,Solana Beach,12962
+Monterey,Soledad,7146
+Santa Barbara,Solvang,4741
+Sonoma,Sonoma,8121
+Tuolumne,Sonora,4153
+Los Angeles,South El Monte,20850
+Los Angeles,South Gate,86284
+El Dorado,South Lake Tahoe,21586
+Los Angeles,South Pasadena,23936
+San Mateo,South San Francisco,54312
+Napa,St. Helena,4990
+Orange,Stanton,30491
+San Joaquin,Stockton,210943
+Solano,Suisun City,22686
+Santa Clara,Sunnyvale,117229
+Lassen,Susanville,7279
+Amador,Sutter Creek,1835
+Kern,Taft,5902
+Kern,Tehachapi,5791
+Tehama,Tehama,401
+Riverside,Temecula,27099
+Los Angeles,Temple City,31100
+Ventura,Thousand Oaks,104352
+Marin,Tiburon,7532
+Los Angeles,Torrance,133107
+San Joaquin,Tracy,33558
+Humboldt,Trinidad,362
+Tulare,Tulare,33249
+Siskiyou,Tulelake,1010
+Stanislaus,Turlock,42198
+Orange,Tustin,50689
+San Bernardino,Twentynine Palms,11821
+Mendocino,Ukiah,14599
+Alameda,Union City,53762
+San Bernardino,Upland,63374
+Solano,Vacaville,71479
+Solano,Vallejo,109199
+Ventura,Ventura,92575
+Los Angeles,Vernon,152
+San Bernardino,Victorville,40674
+Orange,Villa Park,6299
+Tulare,Visalia,75636
+San Diego,Vista,71872
+Los Angeles,Walnut,29105
+Contra Costa,Walnut Creek,60569
+Kern,Wasco,12412
+Stanislaus,Waterford,4771
+Santa Cruz,Watsonville,31099
+Siskiyou,Weed,3062
+Los Angeles,West Covina,96086
+Los Angeles,West Hollywood,36118
+Yolo,West Sacramento,28898
+Los Angeles,Westlake Village,7455
+Orange,Westminster,78118
+Imperial,Westmorland,1380
+Yuba,Wheatland,1631
+Los Angeles,Whittier,77671
+Colusa,Williams,2297
+Mendocino,Willits,5027
+Glenn,Willows,5988
+Yolo,Winters,4639
+Tulare,Woodlake,5678
+Yolo,Woodland,39802
+San Mateo,Woodside,5035
+Orange,Yorba Linda,52422
+Napa,Yountville,3259
+Siskiyou,Yreka,6948
+Sutter,Yuba City,27437
+San Bernardino,Yucaipa,32824
