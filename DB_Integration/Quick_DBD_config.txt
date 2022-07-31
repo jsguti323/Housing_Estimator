@@ -1,0 +1,34 @@
+Housing
+----
+City PK varchar(50)
+Longitude double 
+Lattitude double 
+Population double 
+MedianAge double 
+MedianIncome double 
+MedianHouseValue double
+TotalRooms double
+Bedrooms double
+Households double
+OceanProximity varchar(30)
+
+Weather
+-
+City varchar(30) FK >- Housing.City
+MaxTemp double
+Humidity bigint
+Cloudiness bigint
+WindSpeed double
+Description varchar(100)
+
+Census
+-
+County varchar(30) PK
+Employees bigint
+Establishments bigint
+
+Population
+-
+County varchar(30) FK >- Census.County
+City varchar(30) FK >- Housing.City
+Population bigint
