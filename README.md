@@ -10,3 +10,6 @@ For our final project, our group decided to build multiple machine learning mode
 
 #### Dashboard
 https://public.tableau.com/views/Housing_Estimator/Housing_Estimator?:language=en-US&:display_count=n&:origin=viz_share_link
+
+#### Google Slide Presentation
+https://docs.google.com/presentation/d/1T7_yxJK3ywl04BYXVCxGlF-N4pR6hri29zj-ifyfONc/edit#slide=id.p
