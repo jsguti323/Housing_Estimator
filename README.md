@@ -7,20 +7,19 @@ For our final project, our group decided to build multiple machine learning mode
 </p>
 </details>
 
-<details><summary>  Data Sources:</summary>
-<p>
-* Kaggle: https://www.kaggle.com/datasets/camnugent/california-housing-prices
-* Kaggle: https://www.kaggle.com/datasets/camnugent/california-housing-feature-engineering?select=cal_populations_city.csv
-* Census.gov: https://api.census.gov/data/1990/cbp?get=GEO_TTL,EMP,ESTAB&for=county:*&in=state:06&key=
-* OpenWeatherMap.org: http://api.openweathermap.org/data/2.5/weather?units=Imperial&APPID=
-</p>
-</details>
+###  Data Sources:
 
-<details><summary> Dashboard</summary>
-https://public.tableau.com/views/Housing_Estimator/Housing_Estimator?:language=en-US&:display_count=n&:origin=viz_share_link
-</p>
-</details>
-<details><summary> Google Slide Presentation</summary>
-https://docs.google.com/presentation/d/1T7_yxJK3ywl04BYXVCxGlF-N4pR6hri29zj-ifyfONc/edit#slide=id.p
-</p>
-</details>
+[Kaggle Dataset #1](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
+
+[Kaggle Dataset #2](https://www.kaggle.com/datasets/camnugent/california-housing-feature-engineering?select=cal_populations_city.csv)
+
+[Census.gov](https://api.census.gov/data/1990/cbp?get=GEO_TTL,EMP,ESTAB&for=county:*&in=state:06&key=)
+
+[OpenWeatherMap.org](http://api.openweathermap.org/data/2.5/weather?units=Imperial&APPID=)
+
+### Visualizations: 
+
+[Dashboard](https://public.tableau.com/views/Housing_Estimator/Housing_Estimator?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+[Google Slide Presentation](https://docs.google.com/presentation/d/1T7_yxJK3ywl04BYXVCxGlF-N4pR6hri29zj-ifyfONc/edit#slide=id.p)
+
