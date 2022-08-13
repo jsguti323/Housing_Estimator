@@ -5,11 +5,21 @@
 
 
 ## Overview
-The study presented here is a review of housing values to identify trends and influences related to house features (age of the house, number of rooms, number of bedrooms, location), and external community characteristics (weather, employment rates), based on the 1990 Census data on California house values.  
+Our final project is a study of factors infuencing median house values in California based on the 1990 Census. The Census data comprised house features (age of the house, number of rooms, number of bedrooms, location), and community characteristics (median income, latitude/longitude, and proximity to ocean).  Additional context features were added through weather API calls and county employment rates to establish a more robust result. 
 
-Analysis was conducted using three machine learning models to determine best fit: linear regression, Random Forest Regressor, and Gradient Booster.   We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
+After preliminary review and testing, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression is the most successful model for the study.
 
-Concept Development
+We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
+
+<details><summary>Concept Development</summary>
+
+<p>
+
+![image](https://user-images.githubusercontent.com/98067116/183781387-3861e7ee-cdc1-43a3-90e9-358335a26505.png)
+
+</p>
+</details>
+
 
 Design Study
 Identify question to be answered: which factors influence home values
