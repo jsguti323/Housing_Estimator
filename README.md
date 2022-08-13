@@ -5,39 +5,98 @@
 
 
 ## Overview
-Our final project creates a model to predict median house values in California based on the 1990 Census data. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data. 
+Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and the degree of their influence.
 
-After preliminary review and testing, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study.
+Following the sequence of data preparation, database creation, feature engineering and selection, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study. 
 
-This summary presents the process the team undertook from topic and data selection, through database creation and modeling, to results and conclusion. In it, we detail the technologies we used, our decision-making process, the various iterations of models we considered, and finally lays out our recommendations for the data and the process.  The tabbed outline below follows this sequence.
+This summary presents the process the team undertook from topic and data selection, through database creation and modeling, to results and conclusion. In it, we detail the technologies we used, our decision-making process, the various iterations of models we considered, and finally lay out our recommendations for the data and the process.  The tabbed outline below follows this sequence.
 
 
 <details><summary>Concept Development</summary>
 
 <p>
+## Project Parameters 
+
+ Selected topic
+Reason the topic was selected
+Description of the source of data
+Questions the team hopes to answer with the data
+Description of the data exploration phase of the project
+Description of the analysis phase of the project
+Technologies, languages, tools, and algorithms used throughout the project
+Result of analysis
+Recommendation for future analysis
+Anything the team would have done differently
+ 
 
  ## Design Study    
 The design study followed 5 main steps:  
 
-- Identify topic
-    * Housing value trends
-- Identify data sources  
-    * Census data
-    * Kaggle
-- Identify question to be answered   
-    * what factors influence home values
-- Identify target variable  
-    * median home values
-- Identify model  
-    * Gradient Boosting Regressor 
+- Identify the topic  
+- Identify our data sources    
+- Identify the question to be answered     
+- Specify the target variable     
+- Determine the model  
+  
 
-## Topic and Data Selection 
-Given most recent houing price trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled.  In The team considered multiple factors to include in the study. In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on the ease with which external data could be merged into the larger dataset.  To expedite the model development, the team decided to streamline the study process and focus on fewer variables.  The initial geographical range was decided to be California.
+## Topic and Data Selection  
+The topic was selected was housing value trends. Given most recent trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled. 
  
+
+ ### Criteria for Data Selection  
+ Because this project is based on a machine learning model, one of the   In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based accessibility of the data and on the ease with which external data could be merged into the larger dataset.  
 We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
 
+## Limitations of the Data Set  
+  the data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time within the data set
+ 
+</p>
+</details>
+
+<details><summary>Database Creation and Integration</summary>
+ 
+ Stores static data for use during the project
+Interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model)
+Includes at least two tables (or collections if using MongoDB)
+Includes at least one join using the database language (not including any joins in Pandas)
+Includes at least one connection string (using SQLAlchemy or PyMongo)
+<p>
 
 </p>
+</details>
+
+ the data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time within the data set
+ 
+
+ Description of data preprocessing
+Description of feature engineering and the feature selection, including the team's decision-making process
+Description of how data was split into training and testing sets
+Explanation of model choice, including limitations and benefits
+Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
+Description of how the model was trained (or retrained if the team used an existing model)
+Description and explanation of model's confusion matrix, including final accuracy score
+Additionally, the model obviously addresses the question or problem the team is solving.
+
+
+<details><summary>Linear Regression</summary>
+
+<p>
+
+ </p>
+</details>
+
+<details><summary>Linear Regression</summary>
+
+<p>
+
+ </p>
+</details>
+
+<details><summary>Linear Regression</summary>
+
+<p>
+
+ </p>
 </details>
 
 <details><summary>Tehnologies</summary>
@@ -46,14 +105,76 @@ We will store our database on AWS. Our communication protocols include meeting t
 
 </p>
 </details>
+The Database
+Description
+After considering several data sources for the housing data, the team identified the California Housing Prices database from Kaggle, (details below) as the main dataset.  This dataset is comprehensive, wide-ranging, saturated in geographic area, and includes geographical location coordinates which can link to a wide range of other data sources.  The external data for county employment figures were derived from census data (Census.gov) and weather from openweathermap.org, both called using APIs. The population information is the Kaggle California cities dataset. After cleaning, restructuring, refining and merging the individual datasets,  these four datasets became the production database and subsequently housed in AWS.
 
+Component datasets: details
+•	Census.csv: 
+1990 Census data on communities 
+Selected features (3): 
+o	counties 
+o	Employees 
+o	Establishments 
+Observations: 60
 
+•	Housing.csv: 
+1999 Census data on housing in communities in California
+Data is gathered by block
+Features (11):
+longitude	A measure of how far west a house is; a higher value is farther west
+latitude	A measure of how far north a house is; a higher value is farther north
+housingMedianAge	Median age of a house within a block; a lower number is a newer building
+totalRooms	Total number of rooms within a block
+totalBedrooms	Total number of bedrooms within a block
+population	Total number of people residing within a block
+households	Total number of households, a group of people residing within a home unit, for a block
+medianIncome	Median income for households within a block of houses (measured in tens of thousands of US Dollars)
+medianHouseValue	Median house value for households within a block (measured in US Dollars)
+oceanProximity	Location of the house w.r.t ocean/sea
+Observations: 20,641
+
+•	Weather data:
+Weather for specific date called through weather API
+Features (5):
+o	Max Temp
+o	Humidity
+o	Cloudiness
+o	Wind Speed
+o	Description
+Observations: 20,433 (after merge with cleaned housing dataset)
+
+•	Population data:
+Population information by county and city 
+Features (7):
+o	County
+o	City
+o	Incorporation_date
+o	pop_april_1980
+o	pop_april_1990
+o	pop_april_2000
+o	pop_april_2010
+Observations: 455
+	
+Structuring and Cleaning 
+Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geo coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
+
+ 
+Original dataset
+
+ 
+Modified dataset
+
+Create Table Structure pgAdmin
+The main database was structured according to this ERD:
 
  
 
-<details><summary>Linear Regression</summary>
 
-<p>
+Weather, population, and census were joined into the main dataset, clean_merged_data.csv.
+
+Output database: clean_merged_data.csv
+	Observations: 11,454
 
 </p>
 </details>
