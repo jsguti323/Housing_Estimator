@@ -5,23 +5,34 @@
 
 
 ## Overview
-Our final project is a study of factors infuencing median house values in California based on the 1990 Census. The Census data comprised house features (age of the house, number of rooms, number of bedrooms, location), and community characteristics (median income, latitude/longitude, and proximity to ocean).  Additional context features were added through weather API calls and county employment rates to augment the scope of the Census.
+Our final project creates a model to predict median house values in California based on the 1990 Census data. This data includes house features (age of the house, number of rooms, number of bedrooms, location), and community characteristics (median income, latitude/longitude, and proximity to ocean).  We added additional context features through weather API calls and county employment rates to augment the scope of the Census data. 
 
 After preliminary review and testing, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study.
+
+This summary 
 
 
 <details><summary>Concept Development</summary>
 
 <p>
-## Design Study
-The design study followed 3 main steps:
- 
-- Identify question to be answered: which factors influence home values
-- Identify target variable: median home values
-- Identify model: GradientBoostingRegressor 
 
-Data Selection Process
-The team considered multiple factors to include in the study. In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on the ease with which external data could be merged into the larger dataset.  To expedite the model development, the team decided to streamline the study process and focus on fewer variables.  The initial geographical range was decided to be California.
+ ## Design Study    
+The design study followed 5 main steps:  
+
+- Identify topic
+    * Housing value trends
+- Identify data sources  
+    * Census data
+    * Kaggle
+- Identify question to be answered   
+    * what factors influence home values
+- Identify target variable  
+    * median home values
+- Identify model  
+    * Gradient Boosting Regressor 
+
+## Topic and Data Selection 
+Given most recent houing price trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled.  In The team considered multiple factors to include in the study. In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on the ease with which external data could be merged into the larger dataset.  To expedite the model development, the team decided to streamline the study process and focus on fewer variables.  The initial geographical range was decided to be California.
  
 We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
 
