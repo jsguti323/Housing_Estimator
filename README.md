@@ -5,7 +5,7 @@
 
 
 ## Overview
-Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and the degree of their influence.
+Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and to measure their influence.
 
 Following the sequence of data preparation, database creation, feature engineering and selection, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study. 
 
@@ -44,8 +44,11 @@ The topic was selected was housing value trends. Given most recent trends, the t
  
 
  ### Criteria for Data Selection  
- Because this project is based on a machine learning model, one of the   In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based accessibility of the data and on the ease with which external data could be merged into the larger dataset.  
-We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
+Because this project is based on a machine learning model, one of the most important characteristics was the size of the dataset.  Both overfitting and underfitting are primary concerns in machine learning modelling.  Having a large enough data set helps control for both those conditions. The team set the minimal standard of 10,000 rows to meet this requirement. For that same reason, the team early in the process (concurrent with the data selection and topic selection discussions), determined that either the Random Forest Regressor a
+or the Hist Gradient Boosting Regressor would be good candidates for the final model, since both have a relatively high degree of accuracy while being resistant to overfitting.
+	
+In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based accessibility of the data and on the ease with which external data could be merged into the larger dataset.  
+
 
 ## Limitations of the Data Set  
   the data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time within the data set
@@ -78,21 +81,21 @@ Description and explanation of model's confusion matrix, including final accurac
 Additionally, the model obviously addresses the question or problem the team is solving.
 
 
-<details><summary>Linear Regression</summary>
+<details><summary>Data Exploration</summary>
 
 <p>
 
  </p>
 </details>
 
-<details><summary>Linear Regression</summary>
+<details><summary>Choosing the Model</summary>
 
 <p>
 
  </p>
 </details>
 
-<details><summary>Linear Regression</summary>
+<details><summary>Preprocessing</summary>
 
 <p>
 
