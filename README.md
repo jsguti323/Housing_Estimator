@@ -5,11 +5,11 @@
 
 
 ## Overview
-Our final project creates a model to predict median house values in California based on the 1990 Census data. This data includes house features (age of the house, number of rooms, number of bedrooms, location), and community characteristics (median income, latitude/longitude, and proximity to ocean).  We added additional context features through weather API calls and county employment rates to augment the scope of the Census data. 
+Our final project creates a model to predict median house values in California based on the 1990 Census data. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data. 
 
 After preliminary review and testing, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study.
 
-This summary 
+This summary presents the process the team undertook from topic and data selection, through database creation and modeling, to results and conclusion. In it, we detail the technologies we used, our decision-making process, the various iterations of models we considered, and finally lays out our recommendations for the data and the process.  The tabbed outline below follows this sequence.
 
 
 <details><summary>Concept Development</summary>
