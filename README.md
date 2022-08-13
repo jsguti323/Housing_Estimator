@@ -5,29 +5,37 @@
 
 
 ## Overview
-Our final project is a study of factors infuencing median house values in California based on the 1990 Census. The Census data comprised house features (age of the house, number of rooms, number of bedrooms, location), and community characteristics (median income, latitude/longitude, and proximity to ocean).  Additional context features were added through weather API calls and county employment rates to establish a more robust result. 
+Our final project is a study of factors infuencing median house values in California based on the 1990 Census. The Census data comprised house features (age of the house, number of rooms, number of bedrooms, location), and community characteristics (median income, latitude/longitude, and proximity to ocean).  Additional context features were added through weather API calls and county employment rates to augment the scope of the Census.
 
-After preliminary review and testing, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression is the most successful model for the study.
+After preliminary review and testing, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study.
 
-We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
 
 <details><summary>Concept Development</summary>
 
 <p>
+## Design Study
+The design study followed 3 main steps:
+ 
+- Identify question to be answered: which factors influence home values
+- Identify target variable: median home values
+- Identify model: GradientBoostingRegressor 
 
-![image](https://user-images.githubusercontent.com/98067116/183781387-3861e7ee-cdc1-43a3-90e9-358335a26505.png)
+Data Selection Process
+The team considered multiple factors to include in the study. In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on the ease with which external data could be merged into the larger dataset.  To expedite the model development, the team decided to streamline the study process and focus on fewer variables.  The initial geographical range was decided to be California.
+ 
+We will store our database on AWS. Our communication protocols include meeting twice a week via Google Meet on Monday and Wednesday before class, as well as additional meetings later in the week if needed. 
+
 
 </p>
 </details>
 
+<details><summary>Tehnologies</summary>
 
-Design Study
-Identify question to be answered: which factors influence home values
-Identify target variable: home values
-Identify model: RandomForestRegressor, HistGradientBoostingRegressor (secondary)
+<p>
 
-Data Selection Process
-The team considered multiple factors to include in the study. In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on the ease with which external data could be merged into the larger dataset.  To expedite the model development, the team decided to streamline the study process and focus on fewer variables.  The initial geographical range was decided to be California.
+</p>
+</details>
+
 
 
  
@@ -35,8 +43,6 @@ The team considered multiple factors to include in the study. In addition to the
 <details><summary>Linear Regression</summary>
 
 <p>
-
-![image](https://user-images.githubusercontent.com/98067116/183781387-3861e7ee-cdc1-43a3-90e9-358335a26505.png)
 
 </p>
 </details>
@@ -46,7 +52,7 @@ The team considered multiple factors to include in the study. In addition to the
 
 <p>
 
-![image](https://user-images.githubusercontent.com/98067116/183781529-f9f2a22e-3dfc-4e6b-b475-868d1e2ed469.png)
+
 
 </p>
 </details>
@@ -57,10 +63,6 @@ The team considered multiple factors to include in the study. In addition to the
 <details><summary>Hist Gradient Boosting Regressor</summary>
 
 <p>
-
-![image](https://user-images.githubusercontent.com/98067116/183781742-f6ec4f46-e6c0-4943-988e-6b7c263a8cd1.png)
-
-
 
 </p>
 </details>
