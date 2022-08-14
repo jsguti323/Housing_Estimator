@@ -12,7 +12,7 @@ Following the sequence of data preparation, database creation, feature engineeri
 This summary presents the process the team undertook from topic and data selection, through database creation and modeling, to results and conclusion. In it, we detail the technologies we used, our decision-making process, the various iterations of models we considered, and finally lay out our recommendations for the data and the process.  The tabbed outline below follows this sequence.
 
 
-<details><summary>** Preliminary Design and Development **</summary>
+<details><summary> Preliminary Design and Development </summary>
 
 <p>
 
@@ -100,12 +100,26 @@ Component datasets: details
 	
 	
 ## Limitations of the Data Set  
-  the data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time within the data set
+  While detailed within the features offered, this dataset had some limitations:  
+    - the data is gathered by block; however, the data varies by unit 
+        - 3 features are median values:    
+	    - age of the houses per block;      
+	    - income of the population per block; and,     
+	    - value of the houses per block    
+	- 4 are totals of the represented features within a block:  
+	    - number of rooms   
+	    - number of bedrooms    
+	    - number of people  
+            - number of households    
+
+Scaling the data brings the input data points closer together; however, it is more difficult to get a good understanding of what the data is actually saying in interpreting results. For example, it is difficut to properly weigt total number of rooms on a block as part of individual house values. If the data set had included the number of houses or dwellings being counted in the per-block reference frame, we could have created calculated features to include in the analysis, such as median number of rooms per house or median number of residents.  
+	
+The data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time rendering it relatively static.  	
  
 </p>
 </details>
 <details><summary>Data Exploration/Preliminary Analysis</summary>
- 
+ Data exploration began wit reviewing nd collecting the from the different data sources we found for the model. We created a preliminary database that included 
 
 <p>
 
