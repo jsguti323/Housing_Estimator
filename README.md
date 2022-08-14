@@ -15,16 +15,8 @@ This summary presents the process the team undertook from topic and data selecti
 <details><summary> Preliminary Design and Development </summary>
 
 <p>
-
   
-
-Description of the analysis phase of the project  
-Technologies, languages, tools, and algorithms used throughout the project  
-Result of analysis  
-Recommendation for future analysis  
-Anything the team would have done differently  
- 
- ## Study Design    
+## Study Design    
 The study design followed 5 main steps:  
 
 - Identify the topic  
@@ -98,7 +90,6 @@ Component datasets: details
     - pop_april_2010  
     Observations: 455
 	
-	
 ## Limitations of the Data Set  
   While detailed within the features offered, this dataset had some limitations:  
   
@@ -119,10 +110,21 @@ Lastly, the data reflects a single point in time, so the  characteristics releva
  
 </p>
 </details>
-<details><summary>Data Exploration/Preliminary Analysis</summary>
+
+<p>
+<details>
+<summary>Data Exploration/Preliminary Analysis</summary>
+
+Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements.
+	
+</p>
+</details>
+
+<p>
+<details><summary>Data Preprocessing</summary>
 
 ## Structuring and Cleaning   
-Data exploration began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
+Data preparation began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
 
  ### Census Data  
  #### Starting URL for Census Data API Call.  
@@ -130,22 +132,83 @@ url = "https://api.census.gov/data/1990/cbp?get=GEO_TTL,EMP,ESTAB&for=county:*&i
 census = requests.get(url).json()  
 df = pd.DataFrame(census)  
 
-Original Data  
+Original Dataset  
 
  ![image](https://user-images.githubusercontent.com/101474477/184517692-656ea19d-258b-459f-b8a4-61af6fb7cde9.png)
 
-Original dataset
-
-Cleaning and manipulation:  
+Cleaning and Manipulation:  
 new_columns = ['County', 'Employees', 'Establishments', 'State', 'County Code']
 df['County'] = df['County'].map(lambda x: x.rstrip(" County, CA")
-df = df.drop(columns=['State', 'County Code'])
+df = df.drop(columns=['State', 'County Code'])  
+
+Modified Dataset  
 
 ![image](https://user-images.githubusercontent.com/101474477/184517942-b7e7fd2d-e4c3-458a-8407-3788593f9d64.png)
 
- 
-Modified dataset
 
+### Population Data   
+
+file = '../Data/cal_populations_city.csv'  
+	
+Original dataset  
+	
+![image](https://user-images.githubusercontent.com/101474477/184518484-faac1560-0ac1-417b-9197-56e92bf57d7c.png)
+
+ 
+Modified dataset  
+	
+df = df.drop(columns=['Incorportation_date', 'pop_april_1980', 'pop_april_2000', 'pop_april_2010'])  
+
+![image](https://user-images.githubusercontent.com/101474477/184518591-dcf3d531-b956-4e49-9029-66b6bc6b5a35.png)
+
+### Weather Data  	
+
+-Use citypy to join city name to geographical coordinates    
+	city = citipy.nearest_city(coordinate[0], coordinate[1]).city_name  
+
+#### Parse the JSON and retrieve data.  
+        city_weather = requests.get(city_url).json()  
+        #### Parse out the needed data.     
+        city_max_temp = city_weather["main"]["temp_max"]  
+        city_humidity = city_weather["main"]["humidity"]  
+        city_clouds = city_weather["clouds"]["all"]  
+        city_wind = city_weather["wind"]["speed"]  
+        city_description = city_weather["weather"][0]["description"]  
+        #### Append the city information into city_data list.    
+        city_data.append({"City": city.title(),    
+                          "Max Temp": city_max_temp,  
+                          "Humidity": city_humidity,  
+                          "Cloudiness": city_clouds,  
+                          "Wind Speed": city_wind,  
+                          "Description": city_description})  
+
+New Dataset  
+	
+![image](https://user-images.githubusercontent.com/101474477/184518678-260be8a9-4737-423c-b278-c5f38937b350.png)
+
+### Final Dataset
+
+Original Dataset
+	
+![image](https://user-images.githubusercontent.com/101474477/184518831-d28b4d60-2a12-4dfb-ae52-c579e0013152.png)
+
+Final Dataset
+	
+![image](https://user-images.githubusercontent.com/101474477/184518858-df74aed6-729e-4131-aa14-46b62006a836.png)
+
+## Creating the Table Structure in pgAdmin
+	
+The main database was structured according to this ERD:
+	
+![image](https://user-images.githubusercontent.com/101474477/184518914-16ad6780-6e8e-4954-bbc8-e16e3c47df27.png)
+
+ 
+
+
+Weather, population, and census were joined into the main dataset, clean_merged_data.csv.
+
+Output database: clean_merged_data.csv
+	Observations: 11,454
 <p>
 
 </p>
@@ -156,8 +219,6 @@ Modified dataset
  
 Description of data preprocessing 
 	
-	Structuring and Cleaning 
-Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geo coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
 
 Description of feature engineering and the feature selection, including the team's decision-making process  
 Description of how data was split into training and testing sets 
@@ -180,7 +241,7 @@ Includes at least one connection string (using SQLAlchemy or PyMongo)
 </p>
 </details>
 
- the data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time within the data set
+
  
 
 
@@ -206,16 +267,23 @@ or the Hist Gradient Boosting Regressor would be good candidates for the final m
 
 <details><summary>Analysis</summary>
 
+Description of the analysis phase of the project  
 Description of how the model was trained (or retrained if the team used an existing model)
 Description and explanation of model's confusion matrix, including final accuracy score
 Additionally, the model obviously addresses the question or problem the team is solving.
+	
+	
+
+Result of analysis  
+Recommendation for future analysis  
+Anything the team would have done differently  
 <p>
 
  </p>
 </details>
 
 <details><summary>Tehnologies</summary>
-
+Technologies, languages, tools, and algorithms used throughout the project  
 <p>
 
 </p>
@@ -224,21 +292,7 @@ Additionally, the model obviously addresses the question or problem the team is 
 	
 
  
-Original dataset
 
- 
-Modified dataset
-
-Create Table Structure pgAdmin
-The main database was structured according to this ERD:
-
- 
-
-
-Weather, population, and census were joined into the main dataset, clean_merged_data.csv.
-
-Output database: clean_merged_data.csv
-	Observations: 11,454
 
 </p>
 </details>
