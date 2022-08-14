@@ -38,18 +38,17 @@ In addition to the features above, the team researched availability of community
 ### Description  
 This size specification narrowed the number of sources suitable for analysis.   After some searching, the team identified the US Census 1990 dataset from Kaggle ((https://www.kaggle.com/datasets/camnugent/california-housing-prices, (details below) as the main data source, augmented by other data sources. The California Housing Prices database is comprehensive, wide-ranging, saturated in geographic area, and includes geographical location coordinates which can link to a wide range of other data sources.  The external data for county employment figures were derived from census data (Census.gov) and weather from openweathermap.org, both called using APIs. The population information is the Kaggle California cities dataset. After cleaning, restructuring, refining and merging the individual datasets,  these four datasets became the production database and subsequently housed in AWS and connected in pgAdmin.
 
-Component datasets: details
-- Census.csv: 
-	
+#### Component datasets: details
+- **Census.csv**: 
     1990 Census data on communities   
     Selected features (3):   
     - counties 
     - Employees 
-     - Establishments 
+    - Establishments 
     Observations: 60
 
- - Housing.csv: 
-    1999 Census data on housing in communities in California  
+ - **Housing.csv**:  
+    1999 Census data on housing in communities in California    
     Data is gathered by block  
     Features (11):  
 	
@@ -68,7 +67,7 @@ Component datasets: details
 	
     Observations: 20,641
 	
-- Weather data:  
+- **Weather data**:  
     Weather for specific date called through weather API  
     Features (5):  
     - Max Temp  
@@ -78,7 +77,7 @@ Component datasets: details
     - Description  
     Observations: 20,433 (after merge with cleaned housing dataset)  
 
-- Population data:  
+- **Population data**:  
     Population information by county and city   
     Features (7):  
     - County  
@@ -114,8 +113,6 @@ Lastly, the data reflects a single point in time, so the  characteristics releva
 <p>
 <details><summary>Data Preprocessing</summary>
 
-Description of feature engineering and the feature selection, including the team's decision-making process  
-	
 ## Structuring and Cleaning   
 Data preparation began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
 
@@ -125,7 +122,7 @@ url = "https://api.census.gov/data/1990/cbp?get=GEO_TTL,EMP,ESTAB&for=county:*&i
 census = requests.get(url).json()  
 df = pd.DataFrame(census)  
 
-Original Dataset  
+**Input Dataset**  
 
  ![image](https://user-images.githubusercontent.com/101474477/184517692-656ea19d-258b-459f-b8a4-61af6fb7cde9.png)
 
@@ -134,7 +131,7 @@ new_columns = ['County', 'Employees', 'Establishments', 'State', 'County Code']
 df['County'] = df['County'].map(lambda x: x.rstrip(" County, CA")
 df = df.drop(columns=['State', 'County Code'])  
 
-Modified Dataset  
+**Output Dataset**  
 
 ![image](https://user-images.githubusercontent.com/101474477/184517942-b7e7fd2d-e4c3-458a-8407-3788593f9d64.png)
 
@@ -143,12 +140,12 @@ Modified Dataset
 
 file = '../Data/cal_populations_city.csv'  
 	
-Original dataset  
+**Input Dataset** 
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518484-faac1560-0ac1-417b-9197-56e92bf57d7c.png)
 
  
-Modified dataset  
+**Output Dataset** 
 	
 df = df.drop(columns=['Incorportation_date', 'pop_april_1980', 'pop_april_2000', 'pop_april_2010'])  
 
@@ -175,17 +172,17 @@ df = df.drop(columns=['Incorportation_date', 'pop_april_1980', 'pop_april_2000',
                           "Wind Speed": city_wind,  
                           "Description": city_description})  
 
-New Dataset  
+**Output Dataset**
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518678-260be8a9-4737-423c-b278-c5f38937b350.png)
 
 ### Final Dataset
 
-Original Dataset
+**Input Dataset**
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518831-d28b4d60-2a12-4dfb-ae52-c579e0013152.png)
 
-Final Dataset
+**Output Dataset**
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518858-df74aed6-729e-4131-aa14-46b62006a836.png)
 
@@ -205,19 +202,14 @@ The static datasets were then called into pgAdmin through Spark.
 	
 ![image](https://user-images.githubusercontent.com/101474477/184520065-39833e33-0322-4be6-8203-f0e55a328a42.png)
 
- After being instantiated and joined, the final database was saved to a .csv file and read into Pandas for final data preparation and modelling.
+Weather, population, and census were joined into the main dataset, clean_merged_data.csv.  After being instantiated and joined, the final database was saved to a .csv file and read into Pandas for final data preparation and modelling.
 
+**Output database: clean_merged_data.csv**
+	**Observations: 11,454**
 
-Weather, population, and census were joined into the main dataset, clean_merged_data.csv.
+<details><summary>Technologies</summary>
+Technologies, languages, tools, and algorithms used throughout the project
 
-Output database: clean_merged_data.csv
-	Observations: 11,454
-<p>
-
-</p>
-</details>
-
- 
 <p>
 
 </p>
@@ -365,33 +357,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, test_s
 
 The 70/30 split was in line with recommended practice.
 	
-
-	
-
-Result of analysis  
-Recommendation for future analysis  
-Anything the team would have done differently  
-<p>
-
- </p>
-</details>
-
-<details><summary>Tehnologies</summary>
-Technologies, languages, tools, and algorithms used throughout the project  
-<p>
-
-</p>
-</details>
-
-	
-
- 
-
-
-</p>
-</details>
-
-
 <details><summary>Random Forest Regressor</summary>
 
 <p>
@@ -438,10 +403,11 @@ Enter infor here
 </details>
 
 <details><summary>Results</summary>
-
+Result of analysis  
+Recommendation for future analysis  
+Anything the team would have done differently  
 <p>
 
-If editing, insert text here
 
 </p>
 </details>
@@ -452,7 +418,7 @@ If editing, insert text here
 
 <p>
 
-If editing, insert text here
+
 
 
 </p>
