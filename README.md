@@ -231,7 +231,27 @@ Concurrent with data cleaning and structuring, the team conducted preliminary da
 
 ![image](https://user-images.githubusercontent.com/101474477/184519385-9baa560a-2d00-4646-98e3-dbda83034041.png)
 
+Few of the variables plotted had normal distributions. Households heavily skew left as does population, total rooms, and total bedrooms.. The continuous variables of median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
+	
+A rough regression plot of these variables against the target variable, median house value displayed as:
+The coefficients are the intercept and the slope for each variable. These become the equation for the value predictions for median house value given the value of the independent variable. The formula for the plot of the regression line is y = a+bx where a is the intercept, b is the slope, and x is the value of the independent variable for that observation. 
+Population
+Y Coefficients:
+Intercept	Population	
+225,271.17	-4,740.26	
 
+Formula:
+Y = 225,271.17-4,740.26*population
+Y: House Value	X: Population
+215,791	2
+211,050	3
+206,310	4
+
+
+
+
+
+	
  </p>
 </details>
 
