@@ -5,7 +5,7 @@
 
 
 ## Overview
-Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and to measure their influence. The ultimate determination of the model's effectiveness would be to replicate our result with similar data outside of California.
+Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and to measure their influence. The ultimate determination of the model's effectiveness would be to replicate our result with similar data outside of California.
 
 Following the sequence of data preparation, database creation, feature engineering and selection, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study. 
 
@@ -26,17 +26,27 @@ The study design followed 5 main steps:
 - Determine the model  
   
 ## Topic and Data Selection    
-The topic was selected was housing value trends. Given most recent trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled.   
- 
+The topic was selected was housing value trends. Given most recent trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled.  
+
  ### Criteria for Data Selection    
-Because this project is based on a machine learning model, one of the most important characteristics was the size of the dataset.  Both overfitting and underfitting are primary concerns in machine learning modelling.  Having a large enough data set helps control for both those conditions. The team set the minimal standard of 10,000 rows to meet this requirement.     
-	
-In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on accessibility of the data and on ease with which external data could be merged into the larger dataset. In the end, the team opted for a weather API call and census data on business establishments and number of employees.  
+
+We selected the California Housing Prices database from Kaggle (https://www.kaggle.com/datasets/camnugent/california-housing-prices, details below), median house prices for California districts derived from the 1990 census. This dataset originated S&P Letters Data abnd We collected information on the variables using all the block groups in California from the 1990 Cens us. In this sample a block group on average includes 1425.5 individuals living in a geographically co mpact area. Naturally, the geographical area included varies inversely with the population density. W e computed distances among the centroids of each block group as measured in latitude and longitude. W e excluded all the block groups reporting zero entries for the independent and dependent variables. T he final data contained 20,640 observations on 9 variables. The dependent variable is ln(median house value).
+
+                               Bols    tols
+INTERCEPT		       11.4939 275.7518
+MEDIAN INCOME	       0.4790  45.7768
+MEDIAN INCOME2	       -0.0166 -9.4841
+MEDIAN INCOME3	       -0.0002 -1.9157
+ln(MEDIAN AGE)	       0.1570  33.6123
+ln(TOTAL ROOMS/ POPULATION)    -0.8582 -56.1280
+ln(BEDROOMS/ POPULATION)       0.8043  38.0685
+ln(POPULATION/ HOUSEHOLDS)     -0.4077 -20.8762
+ln(HOUSEHOLDS)	       0.0477  13.0792The Census data  data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors.  In addition to the features above, the team researched availability of community crime statistics and economic indicators.  The deciding factor of whether to include more variables was based on accessibility of the data and on ease with which external data could be merged into the larger dataset. In the end, the team opted for a weather API call and census data on business establishments and number of employees.  
 
 ## The Database    
 
 ### Description  
-This size specification narrowed the number of sources suitable for analysis.   After some searching, the team identified the US Census 1990 dataset from Kaggle ((https://www.kaggle.com/datasets/camnugent/california-housing-prices, (details below) as the main data source, augmented by other data sources. The California Housing Prices database is comprehensive, wide-ranging, saturated in geographic area, and includes geographical location coordinates which can link to a wide range of other data sources.  The external data for county employment figures were derived from census data (Census.gov) and weather from openweathermap.org, both called using APIs. The population information is the Kaggle California cities dataset. After cleaning, restructuring, refining and merging the individual datasets,  these four datasets became the production database and subsequently housed in AWS and connected in pgAdmin.
+Because this project is based on a machine learning model, one of the most important characteristics was the size of the dataset.  Both overfitting and underfitting are primary concerns in machine learning modelling.  Having a large enough data set helps control for both those conditions. The team set the minimal standard of 10,000 rows to meet this requirement.  This size specification narrowed the number of sources suitable for analysis.   After some searching, the team identified the US Census 1990 dataset from Kaggle ( as the main data source, augmented by other data sources. The California Housing Prices database is comprehensive, wide-ranging, saturated in geographic area, and includes geographical location coordinates which can link to a wide range of other data sources.  The external data for county employment figures were derived from census data (Census.gov) and weather from openweathermap.org, both called using APIs. The population information is the Kaggle California cities dataset. After cleaning, restructuring, refining and merging the individual datasets,  these four datasets became the production database and subsequently housed in AWS and connected in pgAdmin.
 
 #### Component datasets: details
 - **Census.csv**: 
