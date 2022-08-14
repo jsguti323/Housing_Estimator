@@ -381,7 +381,7 @@ The 70/30 split was in line with recommended practice.
 
 <p>
 
-Enter infor here
+
 
 </p>
 </details>
