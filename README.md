@@ -112,17 +112,10 @@ Lastly, the data reflects a single point in time, so the  characteristics releva
 </details>
 
 <p>
-<details>
-<summary>Data Exploration/Preliminary Analysis</summary>
-
-Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements.
-	
-</p>
-</details>
-
-<p>
 <details><summary>Data Preprocessing</summary>
 
+Description of feature engineering and the feature selection, including the team's decision-making process  
+	
 ## Structuring and Cleaning   
 Data preparation began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
 
@@ -196,13 +189,22 @@ Final Dataset
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518858-df74aed6-729e-4131-aa14-46b62006a836.png)
 
+</p>
+</details>
+
+<details><summary>Database Creation and Integration</summary>
+
 ## Creating the Table Structure in pgAdmin
 	
-The main database was structured according to this ERD:
-	
-![image](https://user-images.githubusercontent.com/101474477/184518914-16ad6780-6e8e-4954-bbc8-e16e3c47df27.png)
+The team decided to use AWS as the static data repository and use pgAdmin to create the production database. The tables were created in pgAdmin first following the schema:   
 
- 
+![image](https://user-images.githubusercontent.com/101474477/184518914-16ad6780-6e8e-4954-bbc8-e16e3c47df27.png)  
+	
+The static datasets were then called into pgAdmin through Spark.
+	
+![image](https://user-images.githubusercontent.com/101474477/184520065-39833e33-0322-4be6-8203-f0e55a328a42.png)
+
+ After being instantiated and joined, the final database was saved to a .csv file and read into Pandas for final data preparation and modelling.
 
 
 Weather, population, and census were joined into the main dataset, clean_merged_data.csv.
@@ -214,45 +216,21 @@ Output database: clean_merged_data.csv
 </p>
 </details>
 
-
-<details><summary>Data Preprocessing</summary>
  
-Description of data preprocessing 
-	
-
-Description of feature engineering and the feature selection, including the team's decision-making process  
-Description of how data was split into training and testing sets 
-	
-	
 <p>
 
 </p>
 </details>
-
-<details><summary>Database Creation and Integration</summary>
- 
- Stores static data for use during the project
-Interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model)
-Includes at least two tables (or collections if using MongoDB)
-Includes at least one join using the database language (not including any joins in Pandas)
-Includes at least one connection string (using SQLAlchemy or PyMongo)
-<p>
-
-</p>
-</details>
-
-
- 
-
-
-
-
-
-
 
 <details><summary>Data Exploration</summary>
 
 <p>
+Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements.
+		
+![image](https://user-images.githubusercontent.com/101474477/184519340-7aeb165e-fb85-45ae-a81f-c69508b42a65.png)
+
+![image](https://user-images.githubusercontent.com/101474477/184519385-9baa560a-2d00-4646-98e3-dbda83034041.png)
+
 
  </p>
 </details>
@@ -260,13 +238,16 @@ Includes at least one connection string (using SQLAlchemy or PyMongo)
 <details><summary>Choosing the Model</summary>
 Explanation of model choice, including limitations and benefits
 <p>
-For that same reason, the team early in the process (concurrent with the data selection and topic selection discussions), determined that either the Random Forest Regressor a
-or the Hist Gradient Boosting Regressor would be good candidates for the final model, since both have a relatively high degree of accuracy while being resistant to overfitting.
+Description of how data was split into training and testing sets 
+	
+	
+For that same reason, the team early in the process (concurrent with the data selection and topic selection discussions), determined that either the Random Forest Regressor or the Hist Gradient Boosting Regressor would be good candidates for the final model, since both have a relatively high degree of accuracy while being resistant to overfitting.
  </p>
 </details>
 
 <details><summary>Analysis</summary>
 
+Description of how data was split into training and testing sets
 Description of the analysis phase of the project  
 Description of how the model was trained (or retrained if the team used an existing model)
 Description and explanation of model's confusion matrix, including final accuracy score
