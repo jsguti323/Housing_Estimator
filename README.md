@@ -5,7 +5,7 @@
 
 
 ## Overview
-Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and to measure their influence. The ultimate determination of the model's effectiveness would be to replicate our result with similar data outside of California.
+Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. The objective of this study is to identify which factors from our data features impact housing values, and to measure their influence. The ultimate determination of the model's effectiveness would be to replicate our result with similar data outside of California.
 
 Following the sequence of data preparation, database creation, feature engineering and selection, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study. 
 
