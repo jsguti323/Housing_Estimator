@@ -5,7 +5,7 @@
 
 
 ## Overview
-Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and to measure their influence. The ultimate determination of the model's effectiveness would be to apply it successfully to similar data outside of California.
+Our final project creates a model to predict median house values in California based on the US government's Census data from the year 1990. This data includes house features (age of the house, number of rooms, number of bedrooms), and community characteristics (median income, number of households, and geographic location).  We added additional context features through weather API calls and county employment rates to expand the scope of the Census data and enlarge the pool of potential influential factors. The objective of this study is to identify which, if any, of the factors from our data features impact housing values, and to measure their influence. The ultimate determination of the model's effectiveness would be to replicate our result with similar data outside of California.
 
 Following the sequence of data preparation, database creation, feature engineering and selection, the team focused analysis on three machine learning models: Linear Regression, Random Forest Regressor, and Gradient Boosting Regression.  After optimization and comparison, the team concluded the optimized Gradient Boosting Regression to be the most successful model for the study. 
 
@@ -17,7 +17,7 @@ This summary presents the process the team undertook from topic and data selecti
 <p>
 
   
-Description of the data exploration phase of the project  
+
 Description of the analysis phase of the project  
 Technologies, languages, tools, and algorithms used throughout the project  
 Result of analysis  
@@ -101,25 +101,50 @@ Component datasets: details
 	
 ## Limitations of the Data Set  
   While detailed within the features offered, this dataset had some limitations:  
-    - the data is gathered by block; however, the data varies by unit 
-        - 3 features are median values:    
-	    - age of the houses per block;      
-	    - income of the population per block; and,     
-	    - value of the houses per block    
-	- 4 are totals of the represented features within a block:  
-	    - number of rooms   
-	    - number of bedrooms    
-	    - number of people  
-            - number of households    
+  
+    - the data is gathered by block; however, the data varies by unit   
+        - 3 features are median values:  
+	    - age of the houses per block;        
+	    - income of the population per block; and,       
+	    - value of the houses per block      
+	- 4 are totals of the represented features within a block: 
+	    - number of rooms     
+	    - number of bedrooms      
+	    - number of people    
+            - number of households      
 
-Scaling the data brings the input data points closer together; however, it is more difficult to get a good understanding of what the data is actually saying in interpreting results. For example, it is difficut to properly weigt total number of rooms on a block as part of individual house values. If the data set had included the number of houses or dwellings being counted in the per-block reference frame, we could have created calculated features to include in the analysis, such as median number of rooms per house or median number of residents.  
+Scaling the data brings the input data points closer together; however, it is more difficult to get a good understanding of what the data is actually saying in interpreting results. For example, it is difficut to properly weight total number of rooms on a block as part of individual house values. If the data set had included the number of houses or dwellings being counted in the per-block reference frame, we could have created calculated features to include in the analysis, such as median number of rooms per house or median number of residents.  
 	
-The data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time rendering it relatively static.  	
+Lastly, the data reflects a single point in time, so the  characteristics relevant to house values cannot be observed over time rendering it relatively static. With time data, it would be possible to see how impacts change with the changes in the values of the features themselves, and thus get a more accurate undersanding of true trends.  	
  
 </p>
 </details>
 <details><summary>Data Exploration/Preliminary Analysis</summary>
- Data exploration began wit reviewing nd collecting the from the different data sources we found for the model. We created a preliminary database that included 
+
+## Structuring and Cleaning   
+Data exploration began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
+
+ ### Census Data  
+ #### Starting URL for Census Data API Call.  
+url = "https://api.census.gov/data/1990/cbp?get=GEO_TTL,EMP,ESTAB&for=county:*&in=state:06&key=" + census_api_key   
+census = requests.get(url).json()  
+df = pd.DataFrame(census)  
+
+Original Data  
+
+ ![image](https://user-images.githubusercontent.com/101474477/184517692-656ea19d-258b-459f-b8a4-61af6fb7cde9.png)
+
+Original dataset
+
+Cleaning and manipulation:  
+new_columns = ['County', 'Employees', 'Establishments', 'State', 'County Code']
+df['County'] = df['County'].map(lambda x: x.rstrip(" County, CA")
+df = df.drop(columns=['State', 'County Code'])
+
+![image](https://user-images.githubusercontent.com/101474477/184517942-b7e7fd2d-e4c3-458a-8407-3788593f9d64.png)
+
+ 
+Modified dataset
 
 <p>
 
