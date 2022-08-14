@@ -189,6 +189,7 @@ Final Dataset
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518858-df74aed6-729e-4131-aa14-46b62006a836.png)
 
+	
 </p>
 </details>
 
@@ -225,54 +226,146 @@ Output database: clean_merged_data.csv
 <details><summary>Data Exploration</summary>
 
 <p>
+
 Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements.
-		
+
+#### Histograms  
 ![image](https://user-images.githubusercontent.com/101474477/184519340-7aeb165e-fb85-45ae-a81f-c69508b42a65.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184519385-9baa560a-2d00-4646-98e3-dbda83034041.png)
 
-Few of the variables plotted had normal distributions. Households heavily skew left as does population, total rooms, and total bedrooms.. The continuous variables of median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
+Few of the variables plotted had normal distributions. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
+
+#### Simple Univariate Regression  
+Regression plots of these variables against the target variable, median house value, are shown below.  The coefficients are the intercept and the slope for each variable. These become the equation for the value predictions for median house value given the value of the independent variable. The formula for the plot of the regression line is y = a+bx where a is the intercept, b is the slope, and x is the value of the independent variable for that observation. 
 	
-A rough regression plot of these variables against the target variable, median house value displayed as:
-The coefficients are the intercept and the slope for each variable. These become the equation for the value predictions for median house value given the value of the independent variable. The formula for the plot of the regression line is y = a+bx where a is the intercept, b is the slope, and x is the value of the independent variable for that observation. 
-Population
-Y Coefficients:
-Intercept	Population	
-225,271.17	-4,740.26	
+**Population**  
+Y Coefficients:  
+|Intercept	|Population	|
+|---------------|---------------|
+|	225,271.17|	-4,740.26|	
 
-Formula:
-Y = 225,271.17-4,740.26*population
-Y: House Value	X: Population
-215,791	2
-211,050	3
-206,310	4
-
-
-
-
-
+Formula:  
+Y = 225,271.17-4,740.26*population  
+|Y: House Value|	X: Population|
+|--------------|-------------------|
+|215,791|	2|
+|211,050|	3|
+|206,310|	4|  
 	
+![image](https://user-images.githubusercontent.com/101474477/184520957-234221bc-bc46-4e28-b176-b47810721a78.png)
+
+**Total Rooms**
+Y Coefficients:  
+|Intercept	|Rooms	|
+|---------------|---------------|	
+|225,271.17	|18,450.55	|
+
+Formula:  
+Y = 225,271.17+18,450.55*rooms  
+|Y: House Value|	X: Rooms|
+|--------------|-------------------|
+|242,291	|2|
+|250,802	|3|
+|259,312	|4|  
+
+![image](https://user-images.githubusercontent.com/101474477/184521132-0868cf70-2f1d-4f0d-909b-9b26b89372d8.png)
+
+**Median Income**   
+Y Coefficients:  
+|Intercept	|ncome	|
+|--------------|-------------------|	
+|225,271.17	|9,658.27	|
+
+Formula:  
+Y = 225,271.17+79,658.27*income  
+| House Value	| Income|
+|--------------|-------------------|
+|75,271	|50,000|
+|300,271	|75,000|
+|384,588	|100,000|
+
+![image](https://user-images.githubusercontent.com/101474477/184521288-ebbefed6-9b62-4778-aaf9-4679397e519d.png)
+
+**Median House Age**     
+ Y Coefficients:  
+|Intercept	|Age	|
+|--------------|-------------------|
+|225,271.17	|8,510.13|
+
+Formula:  
+Y = 225,271.17+8,510.13*age  
+|Y: House Value	|X: House Age|
+|--------------|-------------------|
+|242,291	|2|
+|250,802	|3|
+|259,312	|4|
+
+![image](https://user-images.githubusercontent.com/101474477/184521439-82fa77c2-6417-494c-9d2a-f5b5e56c4704.png)
+
+**Total Households**
+Y Coefficients:  
+|ntercept	|Households	|
+|--------------|-------------------|
+|225,271.17	|8,010.86|
+
+Formula:  
+Y = 225,271.17+8,010.86*households  
+|Y: House Value	|X: Households|
+|--------------|-------------------|
+|241,293	|2|
+|249,304	|3|
+|257,315	|4|
+
+![image](https://user-images.githubusercontent.com/101474477/184521521-90dc48ce-e477-4b8d-8dab-49cf39a8720b.png)
+
+**Total Bedrooms**  
+Y Coefficients:    
+|Intercept	|Households	|
+|--------------|-------------------|
+|225,271.17	|6,593.80|
+
+Formula:  
+Y = 225,271.17+6,593.80*bedrooms  
+|Y: House Value	|X: Bedrooms|
+|--------------|-------------------|
+|238,459	|2|
+|245,053	|3|
+|251,646	|4|
+
+![image](https://user-images.githubusercontent.com/101474477/184521601-27988feb-a9ff-4e40-ab11-d422763f5693.png)
+
+Although rough, these plots help guide feature selection.
+
  </p>
 </details>
 
 <details><summary>Choosing the Model</summary>
-Explanation of model choice, including limitations and benefits
 <p>
-Description of how data was split into training and testing sets 
+The team agreed that a supervised machine learning model would be best suited for the data and objectives of the project.  We were using labelled data and were working with a relatively large dataset. For that reason, the team early in the process (concurrent with the data selection and topic selection discussions), determined that either the Random Forest Regressor or the Hist Gradient Boosting Regressor would be good candidates for the final model, since both have a relatively high degree of accuracy while being resistant to overfitting.
 	
+We ran both the Random Forest Regressor and the Hist Gradient Boosting Regressor.  In addition, the team decided to explore other models for comparison, so a Linear Regression model was added. As part of the comparison, the team wanted to examine the accuracy scores of the models, but also the feature importances.  Hist Gradient Boosting Regressor does not have a features importances function at this time, but Gradient Boosting Regressor does, so that was substituted for the Hist Gradient Boosting model.  Theses models, the processes, and the results are presented separately below.
 	
-For that same reason, the team early in the process (concurrent with the data selection and topic selection discussions), determined that either the Random Forest Regressor or the Hist Gradient Boosting Regressor would be good candidates for the final model, since both have a relatively high degree of accuracy while being resistant to overfitting.
  </p>
 </details>
 
 <details><summary>Analysis</summary>
 
-Description of how data was split into training and testing sets
-Description of the analysis phase of the project  
-Description of how the model was trained (or retrained if the team used an existing model)
-Description and explanation of model's confusion matrix, including final accuracy score
-Additionally, the model obviously addresses the question or problem the team is solving.
+### Production Preprocessing  
+After loading and reading the database into Pandas for the actual modelling and analysis, the final preprocessing took place.  
+The low value or noisy variables City, County, Longitude, latitude were dropped, and categorical variables, such as Ocean Proximity and weather description were converted to numeric values using get.dummies.
 	
+Then, the preprocessed data was split into the features and target arrays:
+X = housing_df.drop(columns = ["median_house_value"])
+y = housing_df['median_house_value']
+	
+and the training and testing datasets were created:
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, test_size=1/3)
+
+The 70/30 split was in line with recommended practice.
+	
+
 	
 
 Result of analysis  
@@ -328,10 +421,17 @@ Enter infor here
 </p>
 </details>
 
-<details><summary>Visualizations</summary>
+<details><summary>Results and Recommendations</summary>
 
 <p>
 
+</p>
+</details>
+
+<details><summary>Conclusion</summary>
+
+<p>
+	
 ![image](https://user-images.githubusercontent.com/98067116/183781913-c398ffbe-97f8-47a7-910e-74ae0a09246c.png)
 
 </p>
