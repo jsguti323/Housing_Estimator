@@ -211,7 +211,33 @@ Weather, population, and census were joined into the main dataset, clean_merged_
 Technologies, languages, tools, and algorithms used throughout the project
 
 <p>
+API calls
+matplotlib.pyplot 
+collections Counter
+seaborn 
+Python 
+Jupyter Notebook
+R and R Studio
+Pandas, numpy, citypy
+Mlenv environment
+Linear Regression
+GradientBoostingRegressor
+Random Forest Regressor
+Database Integration:
+AWS Relational Database System
+pgAdmin
+prosgresSQL
 
+sklearn.ensemble RandomForestRegressor
+sklearn.datasets make_regression
+sklearn.ensemble HistGradientBoostingRegressor
+sklearn.preprocessing LabelEncoder
+sklearn metrics
+
+sklearn.ensemble RandomForestRegressor
+sklearn.preprocessing StandardScaler
+sklearn.model_selection train_test_split
+sklearn.metrics accuracy_score, classification_report
 </p>
 </details>
 
