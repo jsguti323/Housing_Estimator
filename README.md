@@ -88,18 +88,18 @@ Size of the database was the first consideration.  Both overfitting and underfit
     - pop_april_2010  
     Observations: 455
 	
-## Limitations of the Data Set  
-  While detailed within the features offered, this dataset has some limitations:  
-      - the data is gathered by block; however, the it varies by unit   
-        - 3 features are median values:  
-	    - age of the houses per block;        
-	    - income of the population per block; and,       
-	    - value of the houses per block      
-	- 4 are totals of the represented features within a block: 
-	    - number of rooms     
-	    - number of bedrooms      
-	    - number of people    
-            - number of households      
+## Limitations of the Data Set    
+While detailed within the features offered, this dataset has some limitations:  
+- the data is gathered by block; however, it varies by unit   
+    - 3 features are median values:  
+        - age of the houses per block;        
+        - income of the population per block; and,       
+        - value of the houses per block      
+    - 4 are totals of the represented features within a block: 
+        - number of rooms     
+        - number of bedrooms      
+        - number of people    
+        - number of households      
 
 Scaling the data brings the input data points closer together. However, understanding the data structure is important for sound interpretation of the results. For example, it is difficut to properly weight total number of rooms on a block as part of individual house values. A better metric would be median or average rooms by household or population.
 	
@@ -109,7 +109,7 @@ Lastly, the data reflects a single point in time, so the  characteristics releva
 </details>
 
 <p>
-<details><summary>Data Preprocessing</summary>
+<details><summary>Architect Production Database </summary>
 
 ## Structuring and Cleaning   
 Data preparation began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
@@ -179,13 +179,28 @@ Data preparation began with creating a preliminary data structure usng Pandas to
 ### Final Dataset
 
 **Input Dataset**
+![image](https://user-images.githubusercontent.com/101474477/184720607-2749961a-e565-4a26-8f61-8e4dee7f3517.png)
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518831-d28b4d60-2a12-4dfb-ae52-c579e0013152.png)
 
+#### Cleaning and Manipulation ####  
+
+##### Add City to dataset  
+	
+![image](https://user-images.githubusercontent.com/101474477/184721399-b83c571e-9c75-4fad-9056-e664eaa19757.png)
+	
+##### Check for null, duplicate values.  Drop as needed  
+	
+![image](https://user-images.githubusercontent.com/101474477/184721758-55f06790-0bca-4b0b-a0ff-eddb279ce156.png)
+
+##### Rename, reorder columns  
+	
+![image](https://user-images.githubusercontent.com/101474477/184722110-81be2666-2d95-4848-8235-d19f170a3b53.png)
+![image](https://user-images.githubusercontent.com/101474477/184722253-427f4bf7-501e-4c68-acb0-8714b81a716b.png)
+	
 **Output Dataset**
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518858-df74aed6-729e-4131-aa14-46b62006a836.png)
-
 	
 </p>
 </details>
@@ -211,34 +226,44 @@ Weather, population, and census were joined into the main dataset, clean_merged_
 Technologies, languages, tools, and algorithms used throughout the project
 
 <p>
+
+General  
 - API calls
-- matplotlib.pyplot 
-- collections Counter
-- seaborn 
 - Python 
 - Jupyter Notebook
-- R and R Studio
-- Pandas, numpy, citypy
+- R Studio
+- Pandas
+- numpy
 - Mlenv environment
-- Linear Regression
-- GradientBoostingRegressor
-- Random Forest Regressor  
+
+Preprocessing  
+- sklearn.preprocessing LabelEncoder
+- citypy
 	
-Database Integration:
+Database Integration  
 - AWS Relational Database System
 - pgAdmin
 - prosgresSQL  
 
+Statistical and Modeling  
 - sklearn.ensemble RandomForestRegressor
 - sklearn.datasets make_regression
 - sklearn.ensemble HistGradientBoostingRegressor
-- sklearn.preprocessing LabelEncoder
-- sklearn metrics
+- GradientBoostingRegressor
 
-- sklearn.ensemble RandomForestRegressor
+- sklearn metrics
+- collections Counter
+- sklearn.metrics accuracy_score, classification_report
+	
 - sklearn.preprocessing StandardScaler
 - sklearn.model_selection train_test_split
-- sklearn.metrics accuracy_score, classification_report
+- R
+
+Plotting and Visualization  
+- matplotlib.pyplot 
+- seaborn 
+- dabl
+	
 </p>
 </details>
 
@@ -246,8 +271,10 @@ Database Integration:
 
 <p>
 
-Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements.
+Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements. The objective is to determine whether the data has a normal distribution, measuring skew and kurtosis.  Rgression relies on normal distribution for accuracy; outliers reduce accuracy. 
+	
 Methods to address this in other code variations included normalizing skew 
+	
 #### Histograms  
 ![image](https://user-images.githubusercontent.com/101474477/184519340-7aeb165e-fb85-45ae-a81f-c69508b42a65.png)
 
