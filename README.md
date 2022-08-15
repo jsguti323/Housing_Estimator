@@ -109,7 +109,7 @@ Lastly, the data reflects a single point in time, so the  characteristics releva
 </details>
 
 <p>
-<details><summary>Architect Production Database </summary>
+<details><summary>Production Database Architecture</summary>
 
 ## Structuring and Cleaning   
 Data preparation began with creating a preliminary data structure usng Pandas to merge and join the individual datasets. Creating common columns to link the datasets was the first step.  The housing file did not include any city names, only the geographic coordinates.  The other datasets were identified by city and county.  The initial transformation added the specific city and county names to the housing dataset by using city.py and the location coordinates to list and append each city name to the housing set. 
@@ -276,9 +276,19 @@ Concurrent with data cleaning and structuring, the team conducted preliminary da
 Methods to address this in other code variations included normalizing skew 
 	
 #### Histograms  
-![image](https://user-images.githubusercontent.com/101474477/184519340-7aeb165e-fb85-45ae-a81f-c69508b42a65.png)
+	
+![image](https://user-images.githubusercontent.com/101474477/184750627-77a41ed2-e676-4a9e-a1ff-f85428c83580.png)
 
-![image](https://user-images.githubusercontent.com/101474477/184519385-9baa560a-2d00-4646-98e3-dbda83034041.png)
+![image](https://user-images.githubusercontent.com/101474477/184750975-e9e7a52b-807d-487b-99a1-0ac550a37f82.png)
+	
+![image](https://user-images.githubusercontent.com/101474477/184752109-9387659d-3bb9-4652-98af-c17592d23527.png)
+
+![image](https://user-images.githubusercontent.com/101474477/184752726-429e5cb6-4385-467a-a269-3507aa9bb839.png)
+
+
+
+
+
 
 Few of the variables plotted had normal distributions. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
 	
