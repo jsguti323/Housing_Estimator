@@ -299,10 +299,13 @@ All follow a non-normal distribution. Households heavily skew left as do populat
 ![image](https://user-images.githubusercontent.com/101474477/184695024-12fcfc7b-20b4-4be3-80a8-1bf0f035c7d0.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184695309-995e8ff9-9908-4da3-8394-119a6da1cff4.png)
-	
 
+![image](https://user-images.githubusercontent.com/101474477/184695794-c6028139-5cd6-4425-8ec0-c592adb7b68e.png)
+
+![image](https://user-images.githubusercontent.com/101474477/184695555-d9ddc7f2-b783-4952-872b-58afdac373aa.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184696301-3b4412ba-cec8-4f2d-bb22-56cbfe2edfd8.png)
+	
 ![image](https://user-images.githubusercontent.com/101474477/184696453-e481a84c-5cc8-41f5-bc6f-20ed74d0aea6.png)
 
 #### Simple Univariate Regression  
