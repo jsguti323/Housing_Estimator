@@ -206,7 +206,7 @@ Data preparation began with creating a preliminary data structure usng Pandas to
 </details>
 
 <details><summary>Database Creation and Integration</summary>
-
+<p>
 ## Creating the Table Structure in pgAdmin
 	
 The team decided to use AWS as the static data repository and use pgAdmin to create the production database. The tables were created in pgAdmin first following the schema:   
@@ -221,6 +221,8 @@ Weather, population, and census were joined into the main dataset, clean_merged_
 
 **Output database: clean_merged_data.csv**
 	**Observations: 11,454**
+</p>
+</details>
 
 <details><summary>Technologies</summary>
 Technologies, languages, tools, and algorithms used throughout the project
@@ -254,6 +256,8 @@ Statistical and Modeling
 - sklearn metrics
 - collections Counter
 - sklearn.metrics accuracy_score, classification_report
+
+- scipy.stats shapiro, kurtosis, skew
 	
 - sklearn.preprocessing StandardScaler
 - sklearn.model_selection train_test_split
@@ -287,31 +291,17 @@ Methods to address this in other code variations included normalizing skew
 	
 ![image](https://user-images.githubusercontent.com/101474477/184758474-ad29e7df-5a5b-410d-8471-c135fdb38e35.png)
 
-![image](https://user-images.githubusercontent.com/101474477/184761839-5c573c1e-19aa-4ea8-812d-73033228d313.png)
-
-|	skew	|kurtosis|test statistic	|pvalue
-|---------------|---------|----------------------|
-Population|	3.27	|20.94|0.76	|0
-median_age	|-0.02|	-0.70|0.98	|5.106654534912295e-35)
-median_income|	1.63	|4.72|0.89	|0
-total_rooms	|4.16	|31.37|0.69	|0
-Bedrooms	|3.30	|19.29|0.74	|0
-Households	|3.20|	18.94|0.76	|0
-Max Temp	|-0.97	|1.81|0.94	|0
-Humidity	|-0.56	|0.07|0.97	|5.605193857299268e-45)
+![image](https://user-images.githubusercontent.com/101474477/184761839-5c573c1e-19aa-4ea8-812d-73033228d313.png)  
 
 
-All follow a non-normal distribution
-
-
-Few of the variables plotted had normal distributions. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
+All follow a non-normal distribution. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
 	
 ![image](https://user-images.githubusercontent.com/101474477/184695024-12fcfc7b-20b4-4be3-80a8-1bf0f035c7d0.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184695309-995e8ff9-9908-4da3-8394-119a6da1cff4.png)
 	
-![image](https://user-images.githubusercontent.com/101474477/184695555-d9ddc7f2-b783-4952-872b-58afdac373aa.png)
-![image](https://user-images.githubusercontent.com/101474477/184695794-c6028139-5cd6-4425-8ec0-c592adb7b68e.png)
+
+
 ![image](https://user-images.githubusercontent.com/101474477/184696301-3b4412ba-cec8-4f2d-bb22-56cbfe2edfd8.png)
 ![image](https://user-images.githubusercontent.com/101474477/184696453-e481a84c-5cc8-41f5-bc6f-20ed74d0aea6.png)
 
@@ -443,6 +433,8 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, test_size=1/3)
 
 The 70/30 split was in line with recommended practice.
+ </p>
+</details>	
 	
 <details><summary>Random Forest Regressor</summary>
 
@@ -472,7 +464,6 @@ No overfitting as training and testing scores are very close to each other, thou
 <details><summary>Gradient Boosting Regression</summary>
 
 <p>
-
 
 
 </p>
@@ -509,9 +500,6 @@ Anything the team would have done differently
 <details><summary>Recommendations</summary>
 
 <p>
-
-
-
 
 </p>
 </details>
