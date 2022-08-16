@@ -271,11 +271,11 @@ Plotting and Visualization
 
 <p>
 
-Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements. The objective is to determine whether the data has a normal distribution, measuring skew and kurtosis.  Rgression relies on normal distribution for accuracy; outliers reduce accuracy. 
+Concurrent with data cleaning and structuring, the team conducted preliminary data analysis to get a feel for the data itself.  This took the form of histogram and rough regression on the database elements. The objective is to determine whether the data has a normal distribution, measuring skew and kurtosis.  Regression relies on normal distribution for accuracy; outliers reduce accuracy. 
 	
 Methods to address this in other code variations included normalizing skew 
 	
-#### Histograms  
+#### Histograms with Density Plots
 	
 ![image](https://user-images.githubusercontent.com/101474477/184750627-77a41ed2-e676-4a9e-a1ff-f85428c83580.png)
 
@@ -284,10 +284,24 @@ Methods to address this in other code variations included normalizing skew
 ![image](https://user-images.githubusercontent.com/101474477/184752109-9387659d-3bb9-4652-98af-c17592d23527.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184752726-429e5cb6-4385-467a-a269-3507aa9bb839.png)
+	
+![image](https://user-images.githubusercontent.com/101474477/184758474-ad29e7df-5a5b-410d-8471-c135fdb38e35.png)
+
+![image](https://user-images.githubusercontent.com/101474477/184761839-5c573c1e-19aa-4ea8-812d-73033228d313.png)
+
+|	skew	|kurtosis|test statistic	|pvalue
+|---------------|---------|----------------------|
+Population|	3.27	|20.94|0.76	|0
+median_age	|-0.02|	-0.70|0.98	|5.106654534912295e-35)
+median_income|	1.63	|4.72|0.89	|0
+total_rooms	|4.16	|31.37|0.69	|0
+Bedrooms	|3.30	|19.29|0.74	|0
+Households	|3.20|	18.94|0.76	|0
+Max Temp	|-0.97	|1.81|0.94	|0
+Humidity	|-0.56	|0.07|0.97	|5.605193857299268e-45)
 
 
-
-
+All follow a non-normal distribution
 
 
 Few of the variables plotted had normal distributions. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
