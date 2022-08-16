@@ -64,7 +64,8 @@ Size of the database was the first consideration.  Both overfitting and underfit
 |medianHouseValue	|Median house value for households within a block (measured in US Dollars)|
 |oceanProximity	|Location of the house w.r.t ocean/sea|  
 	
-	Observations: 20,641
+	
+Observations: 20,641	
 	
 - **Weather data**:  
     Weather for specific date called through weather API  
@@ -116,90 +117,70 @@ Data preparation began with creating a preliminary data structure usng Pandas to
 
  ### Census Data  
  #### Starting URL for Census Data API Call.  
-![image](https://user-images.githubusercontent.com/101474477/184716368-41dfe441-b1c7-48cb-b852-4c05a77726e4.png)
-
+![image](https://user-images.githubusercontent.com/101474477/184716368-41dfe441-b1c7-48cb-b852-4c05a77726e4.png)  
+	
 **Input Dataset**  
-
- ![image](https://user-images.githubusercontent.com/101474477/184517692-656ea19d-258b-459f-b8a4-61af6fb7cde9.png)
-
+ ![image](https://user-images.githubusercontent.com/101474477/184517692-656ea19d-258b-459f-b8a4-61af6fb7cde9.png)  
 #### Cleaning and Manipulation ####  
 ![image](https://user-images.githubusercontent.com/101474477/184716537-6b0d0bac-c97d-4770-9bbf-b14b7c5f3840.png)
-![image](https://user-images.githubusercontent.com/101474477/184716638-50affa15-2c87-431a-bde6-f3069e419f21.png)
+![image](https://user-images.githubusercontent.com/101474477/184994274-f1aee790-c05b-4790-a8f3-1111e45c80f5.png)
 ![image](https://user-images.githubusercontent.com/101474477/184716726-897741d0-3208-408f-9ed2-161de0304d69.png)
-
+	
 **Output Dataset**  
-
 ![image](https://user-images.githubusercontent.com/101474477/184517942-b7e7fd2d-e4c3-458a-8407-3788593f9d64.png)
 
-
 ### Population Data   
-
 ![image](https://user-images.githubusercontent.com/101474477/184717378-1d510ba0-5a36-4649-b808-fa47842dc609.png) 
 	
-**Input Dataset** 
-	
+**Input Dataset**  
 ![image](https://user-images.githubusercontent.com/101474477/184518484-faac1560-0ac1-417b-9197-56e92bf57d7c.png)
 	
 #### Cleaning and Manipulation ####  
-![image](https://user-images.githubusercontent.com/101474477/184717539-cc872e4a-5d0a-460f-844b-fd511dae511b.png)
+![image](https://user-images.githubusercontent.com/101474477/184717539-cc872e4a-5d0a-460f-844b-fd511dae511b.png)  
 	
-![image](https://user-images.githubusercontent.com/101474477/184717654-168a40c1-807a-43bc-86d0-133a0509805f.png)
+![image](https://user-images.githubusercontent.com/101474477/184717654-168a40c1-807a-43bc-86d0-133a0509805f.png)  
 	
-![image](https://user-images.githubusercontent.com/101474477/184717815-00303379-c15e-427c-afa8-8fa18b38cba4.png)
-
-**Output Dataset** 
+![image](https://user-images.githubusercontent.com/101474477/184717815-00303379-c15e-427c-afa8-8fa18b38cba4.png)  
 	
-![image](https://user-images.githubusercontent.com/101474477/184518591-dcf3d531-b956-4e49-9029-66b6bc6b5a35.png)
+**Output Dataset**  
+![image](https://user-images.githubusercontent.com/101474477/184518591-dcf3d531-b956-4e49-9029-66b6bc6b5a35.png)   
 
 ### Weather Data  
-
 #### Read the main datafile to join the weather data to:
-	
 ![image](https://user-images.githubusercontent.com/101474477/184718023-0a5a2049-00a0-41fd-a460-1e3bd76237b9.png)
 	
-
-#### Prepare the location coordinates data for processing. Use citypy to join city name to geographical coordinates 
-	
+#### Prepare the location coordinates data for processing. Use citypy to join city name to geographical coordinates: 
 ![image](https://user-images.githubusercontent.com/101474477/184718425-86e23171-cff3-4e6a-ae84-450f3a2f983a.png)
 	
-
-#### Initiate API call
+#### Initiate API call  
 ![image](https://user-images.githubusercontent.com/101474477/184718769-5416282c-3fba-4c2d-bf84-28a11deee29f.png)
 	
-
-
-#### Parse the JSON and retrieve data.  
-	
+#### Parse the JSON and retrieve data  
 ![image](https://user-images.githubusercontent.com/101474477/184720029-7fb3cefc-b9d0-44ef-b7b7-34aac7a54968.png)
 
 **Output Dataset**
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518678-260be8a9-4737-423c-b278-c5f38937b350.png)
 
-### Final Dataset
-
-**Input Dataset**
+### Final Dataset  
+**Input Dataset**  
 ![image](https://user-images.githubusercontent.com/101474477/184720607-2749961a-e565-4a26-8f61-8e4dee7f3517.png)
 	
 ![image](https://user-images.githubusercontent.com/101474477/184518831-d28b4d60-2a12-4dfb-ae52-c579e0013152.png)
 
 #### Cleaning and Manipulation ####  
-
 ##### Add City to dataset  
 	
 ![image](https://user-images.githubusercontent.com/101474477/184721399-b83c571e-9c75-4fad-9056-e664eaa19757.png)
 	
 ##### Check for null, duplicate values.  Drop as needed  
-	
 ![image](https://user-images.githubusercontent.com/101474477/184721758-55f06790-0bca-4b0b-a0ff-eddb279ce156.png)
 
 ##### Rename, reorder columns  
-	
 ![image](https://user-images.githubusercontent.com/101474477/184722110-81be2666-2d95-4848-8235-d19f170a3b53.png)
 ![image](https://user-images.githubusercontent.com/101474477/184722253-427f4bf7-501e-4c68-acb0-8714b81a716b.png)
 	
-**Output Dataset**
-	
+**Output Dataset**  
 ![image](https://user-images.githubusercontent.com/101474477/184518858-df74aed6-729e-4131-aa14-46b62006a836.png)
 	
 </p>
@@ -207,6 +188,7 @@ Data preparation began with creating a preliminary data structure usng Pandas to
 
 <details><summary>Database Creation and Integration</summary>
 <p>
+	
 ## Creating the Table Structure in pgAdmin
 	
 The team decided to use AWS as the static data repository and use pgAdmin to create the production database. The tables were created in pgAdmin first following the schema:   
@@ -266,7 +248,7 @@ Statistical and Modeling
 Plotting and Visualization  
 - matplotlib.pyplot 
 - seaborn 
-- dabl
+- dabl (Data Analysis Baseline library)
 	
 </p>
 </details>
@@ -295,14 +277,17 @@ Methods to address this in other code variations included normalizing skew
 
 
 All follow a non-normal distribution. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
+
+#### Descriptive Statistics
 	
 ![image](https://user-images.githubusercontent.com/101474477/184695024-12fcfc7b-20b4-4be3-80a8-1bf0f035c7d0.png)
 
-![image](https://user-images.githubusercontent.com/101474477/184695309-995e8ff9-9908-4da3-8394-119a6da1cff4.png)
+![image](https://user-images.githubusercontent.com/101474477/184990514-c40b0aa4-6698-4565-933f-b60f0c7d6c7f.png)
+
+![image](https://user-images.githubusercontent.com/101474477/184695555-d9ddc7f2-b783-4952-872b-58afdac373aa.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184695794-c6028139-5cd6-4425-8ec0-c592adb7b68e.png)
 
-![image](https://user-images.githubusercontent.com/101474477/184695555-d9ddc7f2-b783-4952-872b-58afdac373aa.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184696301-3b4412ba-cec8-4f2d-bb22-56cbfe2edfd8.png)
 	
@@ -423,23 +408,31 @@ We ran both the Random Forest Regressor and the Hist Gradient Boosting Regressor
 
 <details><summary>Analysis</summary>
 
-### Production Preprocessing  
-After loading and reading the database into Pandas for the actual modelling and analysis, the final preprocessing took place.  
-The low value or noisy variables City, County, Longitude, latitude were dropped, and categorical variables, such as Ocean Proximity and weather description were converted to numeric values using get.dummies.
+### Final Production Preprocessing  
+#### Load the finished production database:  
+![image](https://user-images.githubusercontent.com/101474477/184995497-3e7763dc-1c92-4336-9098-cd312ce6d4bd.png)
+
+####  Drop Unecessary Features 
+##### Drop low value variables City, County, Longitude, latitude. Encode categorical variables using get.dummies
+![image](https://user-images.githubusercontent.com/101474477/184996523-d1b12537-3853-4078-b8eb-f101f991e65c.png)
+**Prepared Database**  
+![image](https://user-images.githubusercontent.com/101474477/184996812-8a550527-459a-4a05-855b-d7f3cda93784.png)
 	
-Then, the preprocessed data was split into the features and target arrays:
-X = housing_df.drop(columns = ["median_house_value"])
-y = housing_df['median_house_value']
-	
-and the training and testing datasets were created:
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, test_size=1/3)
+##### Split into the features and target arrays:  
+![image](https://user-images.githubusercontent.com/101474477/184996968-54028dda-fbd1-4302-908d-e9c84f18c80b.png)
+
+##### Split the database to create and training and testing datasets:
+![image](https://user-images.githubusercontent.com/101474477/184997177-b5f6f564-5a47-4b02-987f-8f8a57eacbd6.png)
 
 The 70/30 split was in line with recommended practice.
+
+#### Scale the Data  
+![image](https://user-images.githubusercontent.com/101474477/184997484-659309a2-c226-4c42-bb16-06236578113a.png)
+
  </p>
 </details>	
 	
-<details><summary>Random Forest Regressor</summary>
+<details><summary>Linear Regression</summary>
 
 <p>
 
@@ -451,7 +444,7 @@ The 70/30 split was in line with recommended practice.
 
 
 
-<details><summary>Linear Regression</summary>
+<details><summary>Random Forest Regressor</summary>
 
 <p>
 The mean squared error is a common way to measure the prediction accuracy of a model.
