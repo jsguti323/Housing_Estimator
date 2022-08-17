@@ -563,7 +563,8 @@ Optimized parameter max_features value: **6**
 Result of analysis  
 Recommendation for future analysis  
 Anything the team would have done differently 
-	
+
+Another issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
 
 	
 More feature engineering
