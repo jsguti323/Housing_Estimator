@@ -448,7 +448,8 @@ The 70/30 split was in line with recommended practice.
 
 <p>
 The mean squared error is a common way to measure the prediction accuracy of a model.
-The mean squared error is always 0 or positive. When a MSE is larger, this is an indication that the linear regression model doesn’t accurately predict the model.
+The mean squared error is always 0 or positive. When a MSE is larger, this is an indication that the linear regression model doesn’t predict the target
+value accurately.
 
 An important piece to note is that the MSE is sensitive to outliers. 	
 No overfitting as training and testing scores are very close to each other, though accuracy is poor
