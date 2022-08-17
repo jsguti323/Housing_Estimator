@@ -272,12 +272,11 @@ Methods to address this in other code variations included normalizing skew
 ![image](https://user-images.githubusercontent.com/101474477/185211555-aab7fdbd-8b66-4974-9381-e25249a6e6b2.png)
 
 
-All follow a non-normal distribution. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
+All follow a non-normal distribution. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. The Shapito-Wilk test for normality bears this out, as all the p-values for the features below are 0.
 
 #### Descriptive Statistics
 	
-![image](https://user-images.githubusercontent.com/101474477/184998352-ce9450b5-cb16-4aba-9755-d409ca60e208.png)
-
+![image](https://user-images.githubusercontent.com/101474477/185213021-4598bef5-83c3-465e-b287-899eeb9df0d2.png)
 	
 ![image](https://user-images.githubusercontent.com/101474477/184695024-12fcfc7b-20b4-4be3-80a8-1bf0f035c7d0.png)
 
@@ -310,7 +309,7 @@ Y = 225,271.17-4,740.26*population
 	
 ![image](https://user-images.githubusercontent.com/101474477/184520957-234221bc-bc46-4e28-b176-b47810721a78.png)
 
-**Total Rooms**
+**Total Rooms**  
 Y Coefficients:  
 |Intercept	|Rooms	|
 |---------------|---------------|	
