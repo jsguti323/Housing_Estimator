@@ -269,8 +269,7 @@ Methods to address this in other code variations included normalizing skew
 	
 ![image](https://user-images.githubusercontent.com/101474477/184752109-9387659d-3bb9-4652-98af-c17592d23527.png)
 
-![image](https://user-images.githubusercontent.com/101474477/184752726-429e5cb6-4385-467a-a269-3507aa9bb839.png)
-	
+![image](https://user-images.githubusercontent.com/101474477/185211555-aab7fdbd-8b66-4974-9381-e25249a6e6b2.png)
 
 
 All follow a non-normal distribution. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
