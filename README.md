@@ -560,14 +560,20 @@ Optimized parameter max_features value: **6**
 	
 
 	
-Result of analysis  
-Recommendation for future analysis  
-Anything the team would have done differently 
+-Result of analysis  
+-Recommendation for future analysis  
+-Anything the team would have done differently 
 
-Another issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
+	We have concluded that using Gradient Boosting regression is the most appropriate model. Overall median income came out as the top influencer with a weighted score of 40%. Followed by max temperature and the number of business establishments in the county had a score around 10%. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to none weighted score on housing prices. 
+
+![image](https://user-images.githubusercontent.com/98067116/185258653-163d2708-9615-4fc9-aa5d-d019c7101944.png)
+
+
+
+	Another issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
 
 	
-More feature engineering
+More feature engineering would be beneficial to our model. 
 
 
 </p>
