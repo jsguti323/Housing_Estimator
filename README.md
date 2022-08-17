@@ -271,14 +271,14 @@ Methods to address this in other code variations included normalizing skew
 
 ![image](https://user-images.githubusercontent.com/101474477/184752726-429e5cb6-4385-467a-a269-3507aa9bb839.png)
 	
-![image](https://user-images.githubusercontent.com/101474477/184758474-ad29e7df-5a5b-410d-8471-c135fdb38e35.png)
-
-![image](https://user-images.githubusercontent.com/101474477/184761839-5c573c1e-19aa-4ea8-812d-73033228d313.png)  
 
 
 All follow a non-normal distribution. Households heavily skew left as do population, total rooms, and total bedrooms. Median house age, median income, and median house value are more symmetrically distributed as are maximum temperature, humidity and wind speed. 
 
 #### Descriptive Statistics
+	
+![image](https://user-images.githubusercontent.com/101474477/184998352-ce9450b5-cb16-4aba-9755-d409ca60e208.png)
+
 	
 ![image](https://user-images.githubusercontent.com/101474477/184695024-12fcfc7b-20b4-4be3-80a8-1bf0f035c7d0.png)
 
@@ -287,7 +287,6 @@ All follow a non-normal distribution. Households heavily skew left as do populat
 ![image](https://user-images.githubusercontent.com/101474477/184695555-d9ddc7f2-b783-4952-872b-58afdac373aa.png)
 
 ![image](https://user-images.githubusercontent.com/101474477/184695794-c6028139-5cd6-4425-8ec0-c592adb7b68e.png)
-
 
 ![image](https://user-images.githubusercontent.com/101474477/184696301-3b4412ba-cec8-4f2d-bb22-56cbfe2edfd8.png)
 	
@@ -435,25 +434,40 @@ The 70/30 split was in line with recommended practice.
 <details><summary>Linear Regression</summary>
 
 <p>
+	
+#### Define and Fit the Model  
 
+![image](https://user-images.githubusercontent.com/101474477/185000179-cd1a852a-1367-47ff-9fcd-5431916cc71a.png)  
 
+##### Print the Model Intercept and Coefficient Values  
+	
+![image](https://user-images.githubusercontent.com/101474477/185000560-d1449412-12ca-4bb0-af12-ddbce6e126f3.png)
 
+![image](https://user-images.githubusercontent.com/101474477/185000437-14b5b930-7eb9-4de8-82a4-3563e494a3ab.png)
+	
+![image](https://user-images.githubusercontent.com/101474477/185000767-42748512-5bf7-4afc-bbaa-f762f5a63e54.png)
+
+![image](https://user-images.githubusercontent.com/101474477/185000856-c40bfefe-f857-403d-9d5a-c8d31c533138.png)
+
+The mean squared error is a common way to measure the prediction accuracy of a model. The mean squared error is always 0 or positive. When a MSE is larger, this is an indication that the linear regression model doesn’t accurately predict the model.
+
+An important piece to note is that the MSE is sensitive to outliers. No overfitting as training and testing scores are very close to each other, though accuracy is poor
+	
 </p>
 </details>
-
-
 
 
 <details><summary>Random Forest Regressor</summary>
 
 <p>
-The mean squared error is a common way to measure the prediction accuracy of a model.
-The mean squared error is always 0 or positive. When a MSE is larger, this is an indication that the linear regression model doesn’t predict the target
-value accurately.
-
-An important piece to note is that the MSE is sensitive to outliers. 	
-No overfitting as training and testing scores are very close to each other, though accuracy is poor
 	
+#### Define and Fit the Model    
+	
+![image](https://user-images.githubusercontent.com/101474477/185002626-565c40ae-fbe1-48fa-9993-4a8acc927fea.png)
+
+#### Print the Results  	 
+![image](https://user-images.githubusercontent.com/101474477/185002754-46d792cd-83f8-4c32-acd3-f4c30ee55b70.png)
+
 </p>
 </details>
 
@@ -461,47 +475,111 @@ No overfitting as training and testing scores are very close to each other, thou
 <details><summary>Gradient Boosting Regression</summary>
 
 <p>
-
-
-</p>
-</details>
-
-<details><summary>Results and Recommendations</summary>
-
-<p>
-
-</p>
-</details>
-
-<details><summary>Conclusion</summary>
-
-<p>
 	
-![image](https://user-images.githubusercontent.com/98067116/183781913-c398ffbe-97f8-47a7-910e-74ae0a09246c.png)
+## Pre-Optimization      
+#### Define and Fit the Model     
+![image](https://user-images.githubusercontent.com/101474477/185002867-8c45f18e-d075-4b4e-8656-4df4dbbf64bd.png)
+
+	
+#### Print the Result  
+![image](https://user-images.githubusercontent.com/101474477/185002957-7283e8ca-d054-40cb-9ff3-3e5057162cd0.png)
+
+## Optimize the Model  
+### n_estimators  
+#### Define Parameters Function, Run the Optimization  
+	
+![image](https://user-images.githubusercontent.com/101474477/185018374-88388746-5308-44f5-9a79-8673095a84ba.png)
+
+#### Extract Best Fit and Plot  	
+![image](https://user-images.githubusercontent.com/101474477/185003594-608509d1-94e3-4e59-beb7-4fe87915822c.png)
+![image](https://user-images.githubusercontent.com/101474477/185003845-d0ee3c40-d17d-4cfb-9cdc-195d8b57ae3c.png)
+	
+##### Summary  
+The hyperparameter n_estimators indicates the total number of trees used in the model to arrive at the final result.  A higher number of trees provides better performance but increases the amount of the code processing time. 
+	
+The accuracy score over the training set increases continuously with the increase in the n_estimators up to a certain point. In this graph, the performance over the test set increases initially as n_estimators increases. After the n_estimators reaches 600, however, the accuracy score becomes stagnant. Which means that even if the value of n_estimators increases over 600, there is no more gain in the accuracy level of test set.  Subsequent increase in the n_estimators value will not add any value to the model; it will slow the model and likely result in overfitting.  
+
+Optimized parameter n_estimators value: **600**
+
+### max_depth  
+#### Redefine the Model with Optimized n_estimator Value   
+
+#### Define Parameters Function, Run the Optimization  
+With the defined n_estimators of 600, the second optimization model is run for max_depth:  
+
+![image](https://user-images.githubusercontent.com/101474477/185005105-7bbaf492-afdf-4726-99d0-3f1687c147cb.png)  
+
+![image](https://user-images.githubusercontent.com/101474477/185005605-a5649a4f-df90-4182-b013-262ad582d8b8.png)
+
+#### Extract Best Fit and Plot  
+	
+![image](https://user-images.githubusercontent.com/101474477/185005857-d8be51c1-5537-4ede-9799-723007a9d3b3.png)  
+
+##### Summary    
+max_depth indicates the maximum depth of trees in the model. It is defined as longest path between the root node and the leaf node. Using max_depth, we can control the depth we want every tree to grow. In the above graph, as the value of max depth increases, the performance of the model over the training set increases continuously and eventually achieves the 100 % accuracy score. 
+	
+However, as max_depth value increases, the performance over the test set increases up to a certain point after which it no longer increases model performance.  In this model, after max_depth value of 4, performance begins to decrease rapidly. At this stage, the tree starts to overfit the training set and therefore is not able to generalize over the unseen points in the test set.
+	
+Optimized parameter max_depth value: **4**  
+	
+### max_features  
+#### Redefine the Model with Optimized n_estimator, max_depth Values  
+
+#### Define Parameters Function, Run the Optimization  
+With the defined n_estmators of 600 and max_depth of 4, the third optimization model is run for max_features:  
+
+![image](https://user-images.githubusercontent.com/101474477/185007318-1c0bb3d4-69ae-4158-9092-db44adebd077.png)
+
+#### Extract Best Fit and Plot  
+![image](https://user-images.githubusercontent.com/101474477/185007692-45888353-3341-4597-aa8f-eb5e758126c4.png)  
+
+![image](https://user-images.githubusercontent.com/101474477/185007727-5d4b3559-80db-4085-921a-c09d165e6daf.png)
+
+
+##### Summary    
+max_features simulates the number of maximum features provided to each tree in a model. The model chooses some random samples from the features to find the best split. In the above graph, as the value of max_features increases, the performance of the model over training set increases continuously up to the point where max_features is greater than 6.  At this stage, max_features is past optimal value and performance ceases to improve. The tree starts to overfit the training set and hence is not able to generalize over the unseen points in the test set.
+	
+Optimized parameter max_features value: **6**  
+	
+## Final Optimized Model      
+#### Redefine the Model with Optimized n_estimators = 600, max_depth = 4, max_features = 6 
+
+#### Define Parameters Function, Run the Optimization  
+![image](https://user-images.githubusercontent.com/101474477/185017389-ea2f2700-27f7-48a8-b91f-3ba016788d35.png)
+
+#### Specify, Plot Feature Importances  
+	
+![image](https://user-images.githubusercontent.com/101474477/185017585-7a36ffcc-3475-45cc-9358-acdf795c44cc.png)
+![image](https://user-images.githubusercontent.com/101474477/185017893-d388510a-c7e7-45e0-9f47-3ec5f2e0176b.png)
 
 </p>
 </details>
 
 <details><summary>Results</summary>
+
+<p>
+
+	
+</p>
+</details>
+
+<details><summary>Recommendations and Conclusion</summary>
+
+<p>
+	
 Result of analysis  
 Recommendation for future analysis  
-Anything the team would have done differently  
-<p>
+Anything the team would have done differently 
+	
+
+	
+More feature engineering
 
 
 </p>
 </details>
 
-
-
-<details><summary>Recommendations</summary>
-
-<p>
-
-</p>
-</details>
-
-
+	
 
 ####  Data Sources:
 
