@@ -560,12 +560,7 @@ Optimized parameter max_features value: **6**
 <p>
 
 	
-</p>
-</details>
 
-<details><summary>Recommendations and Conclusion</summary>
-
-<p>
 	
 Result of analysis  
 Recommendation for future analysis  
