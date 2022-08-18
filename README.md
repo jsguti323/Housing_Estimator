@@ -397,7 +397,7 @@ One of the challenges of the original dataset lies with the variables which repr
 
 ![image](https://user-images.githubusercontent.com/101474477/185263905-079dabb9-8919-4e8b-839a-b765c45f8799.png)
 
-Total rooms numbering more than 10,000 comprise only about 1.2% of the total of all rooms. Ninety-five percent lie with the range of 6 to 6,000.  As a result, the data for this feature is very heavily skewed left, and the rough regression against median home values has an R-squared factor infinitely close to zero, and an MSE of  3,749,385,275,641. Trying different approaches to managing this type of issue would likely help in model accuracy. 
+Total rooms numbering more than 10,000 comprise only about 1.2% of the total of all rooms. Ninety-five percent lie with the range of 6 to 6,000.  As a result, the data for this feature is very heavily skewed left, and the rough regression against median home values has an R-squared factor infinitely close to zero, and a very high MSE. Feature engineering using various approaches could assist in model accuracy. 
  
  </p>
 </details>
@@ -572,7 +572,7 @@ Gradient Boosting, as well as the other two, ranked median income as the top inf
 
 ![image](https://user-images.githubusercontent.com/101474477/185267168-af1408d1-a5fe-40a4-a34e-4624663205b4.png)
 
-Linear regression the base Another issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
+Linear regression is considered one of the base techniques for describing the relationshipAnother issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
 
 	
 
@@ -582,7 +582,9 @@ Linear regression the base Another issue with regression trees is the number of 
 <details><summary>Conclusion and Recommendation</summary>
 
 <p>
-After More feature engineering would be beneficial to our model. 
+As an initial recommendation, the team is in agreement that upleveling the number and quality of data sources would be an essential priority. .  The team had researched different sources for data related to climate data, crime data, and more economic indicators.  Such data would contribute to robust, portable predictive modelling for housing prices applicable 
+	
+	After More feature engineering would be beneficial to our model. 
 
 
 </p>
