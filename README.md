@@ -1,4 +1,3 @@
-
 ## Housing Estimator
 
 
@@ -601,3 +600,4 @@ As an initial recommendation, the team is in agreement that upleveling the numbe
 [Dashboard](https://public.tableau.com/views/Housing_Estimator/Housing_Estimator?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 [Google Slide Presentation](https://docs.google.com/presentation/d/1T7_yxJK3ywl04BYXVCxGlF-N4pR6hri29zj-ifyfONc/edit#slide=id.p)
+
