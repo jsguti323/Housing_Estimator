@@ -397,7 +397,7 @@ One of the challenges of the original dataset lies with the variables which repr
 
 ![image](https://user-images.githubusercontent.com/101474477/185263905-079dabb9-8919-4e8b-839a-b765c45f8799.png)
 
-Total rooms numbering more than 10,000 comprise only about 1.2% of the total of all rooms. Ninety-five percent lie with the range of 6 to 6,000.  As a result, the data for this feature is very heavily skewed left, and the rough regression against median home values has an R-squared factor infinitely close to zero, and a very high MSE. Feature engineering using various approaches could assist in model accuracy. 
+Total rooms numbering more than 10,000 comprise only about 1.2% of the total of all rooms. Ninety-five percent lie with the range of 6 to 6,000.  As a result, the data for this feature is very heavily skewed left, and the rough regression against median home values has an R-squared factor infinitely close to zero, and a very high MSE. Feature engineering using various approaches could assist in model accuracy in addition to scaling. 
  
  </p>
 </details>
@@ -568,24 +568,20 @@ After running the three main models, Linear Regression, Random Forest Regressor,
 
 ![image](https://user-images.githubusercontent.com/101474477/185269230-59222b32-4a45-43f5-ad91-6be02ac15a75.png)
 	
-Gradient Boosting, as well as the other two, ranked median income as the top influencer with a weighted score of 40%.  In the Gradient Boosting model feature importances,  median income was followed by max temperature and the number of business establishments. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to none weighted score on housing prices. 
+Gradient Boosting as well as the other two techniques ranked median income as the top influencer with a weighted score of 40%.  In the Gradient Boosting model feature importances,  median income was followed by max temperature and the number of business establishments. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to none weighted score on housing prices. 
 
 ![image](https://user-images.githubusercontent.com/101474477/185267168-af1408d1-a5fe-40a4-a34e-4624663205b4.png)
 
-Linear regression is considered one of the base techniques for describing the relationshipAnother issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
+Linear regression is considered a standard for describing relationships between and among variables. It provides the base for understanding how the dependent and independent variables interact, providing linear and scatter plots to capture the shape of the regression and the mathematical predictive equations.  Using linear regression as a benchmark for model performance, we then moved to Random Forest Regressor.  Random Forest Regressor is a strong machine learning model.  It is resistant to ovefitting and handles large datasets well.  However, Random Forest is sensitive to the number of significant variables and the number of nonsignificant variables in a data set and can perform more poorly with data sets with a large number of noisy variables. Boosting procedures' performance is not affected by the presence of noisy variables, and have a higher accuracy rate in consequence.  
 
-	
-
-
-</p>
+	</p>
 </details>
 <details><summary>Conclusion and Recommendation</summary>
 
 <p>
-As an initial recommendation, the team is in agreement that upleveling the number and quality of data sources would be an essential priority. .  The team had researched different sources for data related to climate data, crime data, and more economic indicators.  Such data would contribute to robust, portable predictive modelling for housing prices applicable 
+As an initial recommendation, the team is in agreement that upleveling the number and quality of data sources would be an essential priority. .  The team had researched different sources for data related to climate data, crime data, and more economic indicators.  Such data would contribute to robust, portable predictive modelling for housing prices applicable.
 	
-	After More feature engineering would be beneficial to our model. 
-
+	
 
 </p>
 </details>
