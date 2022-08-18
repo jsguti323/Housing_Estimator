@@ -24,7 +24,7 @@ The study design followed 5 main steps:
 - Determine the model  
   
 ## Topic and Data Selection    
-The topic was selected was housing value trends. Given most recent trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled.  
+The topic was selected was housing price trends. Given most recent trends, the team felt that the topic was interesting and relevant, providing a rich opportunity in terms of available data and the broad array of features which can be modeled.  
 
  ### Criteria for Data Selection    
 
@@ -47,7 +47,7 @@ Size of the database was the first consideration.  Both overfitting and underfit
     Observations: 60
 
  - **Housing.csv**:  
-    1999 Census data on housing in communities in California    
+    1990 Census data on housing in communities in California    
     Data is gathered by block: The US Census Bureau Districts (blocks) are the base units for the Census Bureau's survey process. 
     Features (11):  
 	
@@ -249,6 +249,7 @@ Plotting and Visualization
 - matplotlib.pyplot 
 - seaborn 
 - dabl (Data Analysis Baseline library)
+- Tableau
 	
 </p>
 </details>
@@ -391,6 +392,13 @@ Y = 225,271.17+6,593.80*bedrooms
 
 Although rough, these plots help guide feature selection.
 
+#### Outliers within the dataset 
+One of the challenges of the original dataset lies with the variables which represent totals of individual features, such as total number of bedrooms, total number of households, and total number of bedrooms.  This last in particular presents issues with extreme outliers.  The range of this variable is 6 to slightly over 32,000.  Given that the base unit stipulated is a block, a density of 32,000 rooms would argue for large apartment complexes rather than individual houses.  
+
+![image](https://user-images.githubusercontent.com/101474477/185263905-079dabb9-8919-4e8b-839a-b765c45f8799.png)
+
+Total rooms numbering more than 10,000 comprise only about 1.2% of the total of all rooms. Ninety-five percent lie with the range of 6 to 6,000.  As a result, the data for this feature is very heavily skewed left, and the rough regression against median home values has an R-squared factor infinitely close to zero, and an MSE of  3,749,385,275,641. Trying different approaches to managing this type of issue would likely help in model accuracy. 
+ 
  </p>
 </details>
 
@@ -447,9 +455,7 @@ The 70/30 split was in line with recommended practice.
 
 ![image](https://user-images.githubusercontent.com/101474477/185000856-c40bfefe-f857-403d-9d5a-c8d31c533138.png)
 
-The mean squared error is a common way to measure the prediction accuracy of a model. The mean squared error is always 0 or positive. When a MSE is larger, this is an indication that the linear regression model doesn’t accurately predict the model.
-
-An important piece to note is that the MSE is sensitive to outliers. No overfitting as training and testing scores are very close to each other, though accuracy is poor
+The mean squared error measures the prediction accuracy of a model, and is always 0 or positive. When the MSE is larger, this is an indication that the linear regression model is not accurately predicting the outcome. An important piece to note is that the MSE is sensitive to outliers, so the greater the number and magnitude of the outliers, the greater the deviation from the mean and the less accurate the model. Testing and training scores that are close together indicate minimal or no overfitting; however, a low accuracy score indicates weakness in the data.
 	
 </p>
 </details>
@@ -478,7 +484,6 @@ An important piece to note is that the MSE is sensitive to outliers. No overfitt
 #### Define and Fit the Model     
 ![image](https://user-images.githubusercontent.com/101474477/185002867-8c45f18e-d075-4b4e-8656-4df4dbbf64bd.png)
 
-	
 #### Print the Result  
 ![image](https://user-images.githubusercontent.com/101474477/185002957-7283e8ca-d054-40cb-9ff3-3e5057162cd0.png)
 
@@ -553,33 +558,35 @@ Optimized parameter max_features value: **6**
 </p>
 </details>
 
-<details><summary>Results</summary>
+<details><summary>Analysis Results</summary>
 
 <p>
+After running the three main models, Linear Regression, Random Forest Regressor, and Gradient Boosting Regressor, Gradiebt Boosting Regressor emerged as the technique best suited for the model.  After optimization, Gadient Boosting had the highest accuracy score and the lowest mean errors of the three. 
+
+![image](https://user-images.githubusercontent.com/101474477/185266907-13a7aa81-3edd-48c3-a315-8953e72a6d11.png)
+
+
+![image](https://user-images.githubusercontent.com/101474477/185269230-59222b32-4a45-43f5-ad91-6be02ac15a75.png)
+	
+Gradient Boosting, as well as the other two, ranked median income as the top influencer with a weighted score of 40%.  In the Gradient Boosting model feature importances,  median income was followed by max temperature and the number of business establishments. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to none weighted score on housing prices. 
+
+![image](https://user-images.githubusercontent.com/101474477/185267168-af1408d1-a5fe-40a4-a34e-4624663205b4.png)
+
+Linear regression the base Another issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
 
 	
-
-	
--Result of analysis  
--Recommendation for future analysis  
--Anything the team would have done differently 
-
-	We have concluded that using Gradient Boosting regression is the most appropriate model. Overall median income came out as the top influencer with a weighted score of 40%. Followed by max temperature and the number of business establishments in the county had a score around 10%. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to none weighted score on housing prices. 
-
-![image](https://user-images.githubusercontent.com/98067116/185258653-163d2708-9615-4fc9-aa5d-d019c7101944.png)
-
-
-
-	Another issue with regression trees is the number of significant variables and the number of nonsignificant variables in your data set. It is known that when you have few interesting input variables and a large number of noise variables the regression forests does not behave well. Boosting procedures does not have this behavior. There is a good reason for that. Regression forests produce more uninteresting trees which have the potential to move the learned structure away from the true underlying structure. For boosting this does not happen since at each iteration only the region of interests have large weight, so the already learned regions are affected less. The remedy would be to play with the number of variables selected on learning time.
-
-	
-More feature engineering would be beneficial to our model. 
 
 
 </p>
 </details>
+<details><summary>Conclusion and Recommendation</summary>
 
-	
+<p>
+After More feature engineering would be beneficial to our model. 
+
+
+</p>
+</details>
 
 ####  Data Sources:
 
