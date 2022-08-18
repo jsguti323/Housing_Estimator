@@ -560,27 +560,28 @@ Optimized parameter max_features value: **6**
 <details><summary>Analysis Results</summary>
 
 <p>
-After running the three main models, Linear Regression, Random Forest Regressor, and Gradient Boosting Regressor, Gradiebt Boosting Regressor emerged as the technique best suited for the model.  After optimization, Gadient Boosting had the highest accuracy score and the lowest mean errors of the three. 
+After running the three main models, Linear Regression, Random Forest Regressor, and Gradient Boosting Regressor, Gradient Boosting Regressor emerged as the technique best suited for the model.  After optimization, Gradient Boosting had the highest accuracy score and the lowest mean errors of the three. 
 
 ![image](https://user-images.githubusercontent.com/101474477/185266907-13a7aa81-3edd-48c3-a315-8953e72a6d11.png)
 
 
 ![image](https://user-images.githubusercontent.com/101474477/185269230-59222b32-4a45-43f5-ad91-6be02ac15a75.png)
 	
-Gradient Boosting as well as the other two techniques ranked median income as the top influencer with a weighted score of 40%.  In the Gradient Boosting model feature importances,  median income was followed by max temperature and the number of business establishments. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to none weighted score on housing prices. 
+Gradient Boosting as well as the other two techniques ranked median income as the top influencer with a weighted score of 40%.  In the Gradient Boosting model feature importances,  median income was followed by max temperature and the number of business establishments. Humidity, total rooms, population, and inland/ocean proximity also had a small impact on the housing prices. The number of employed people, wind speed, total bedrooms, amount of households, age and near ocean had minimal impact. All other features had a little to zero weighted score on housing prices. 
 
 ![image](https://user-images.githubusercontent.com/101474477/185267168-af1408d1-a5fe-40a4-a34e-4624663205b4.png)
 
-Linear regression is considered a standard for describing relationships between and among variables. It provides the base for understanding how the dependent and independent variables interact, providing linear and scatter plots to capture the shape of the regression and the mathematical predictive equations.  Using linear regression as a benchmark for model performance, we then moved to Random Forest Regressor.  Random Forest Regressor is a strong machine learning model.  It is resistant to ovefitting and handles large datasets well.  However, Random Forest is sensitive to the number of significant variables and the number of nonsignificant variables in a data set and can perform more poorly with data sets with a large number of noisy variables. Boosting procedures' performance is not affected by the presence of noisy variables, and have a higher accuracy rate in consequence.  
+Linear regression is considered a standard for describing relationships between and among variables. It provides the base for understanding how the dependent and independent variables interact, providing linear and scatter plots to capture the shape of the regression and the mathematical predictive equations.  Using linear regression as a benchmark for model performance, we then moved to Random Forest Regressor.  Random Forest Regressor is a strong machine learning model.  It is resistant to ovefitting and handles large datasets well.  However, Random Forest is sensitive to the number of significant variables and the number of nonsignificant variables in a data set and can perform more poorly with data sets with a large number of noisy variables. Because of its step-wise algorithm, Boosting procedures' performance is not affected by the presence of noisy variables, and have a higher accuracy rate in consequence.  
 
-	</p>
+</p>
 </details>
+
 <details><summary>Conclusion and Recommendation</summary>
 
 <p>
-As an initial recommendation, the team is in agreement that upleveling the number and quality of data sources would be an essential priority. .  The team had researched different sources for data related to climate data, crime data, and more economic indicators.  Such data would contribute to robust, portable predictive modelling for housing prices applicable.
-	
-	
+Our first recommendation is that upleveling the number and quality of data sources would be an essential priority. The team had researched different sources for data related to climate data, crime data, and more economic indicators.  Such data would contribute to robust, portable predictive modelling for housing prices applicable.
+
+We would also expand in types of data and data sources included in the model.  In brief, we would substitute climate data for weather, and add crime data as well as expanded economic indicators nationally and by region.
 
 </p>
 </details>
